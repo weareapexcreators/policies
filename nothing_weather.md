@@ -1,3 +1,4 @@
+
 # Privacy Policy for Nothing Weather: Warm or Cold
 
 **Effective Date: July 27, 2024**
@@ -13,11 +14,11 @@ Our App temporarily accesses device location data solely for the purpose of fetc
 ## 3. Location Data Usage
 
 The App accesses your device's location data to provide you with relevant weather information for your area. Here's how we handle location data:
-- It is only accessed when you use the app to fetch weather information
-- It is used solely to retrieve weather data for your current location
-- It is not stored or retained by our app in any way
-- It is not transmitted to our servers or shared with any third parties
-- Once the weather information is fetched, the location data is immediately discarded
+- It is only accessed when you use the app to fetch weather information.
+- It is used solely to retrieve weather data for your current location.
+- It is not stored or retained by our app in any way.
+- It is not transmitted to our servers or shared with any third parties.
+- Once the weather information is fetched, the location data is immediately discarded.
 
 You can control the app's access to your location through your device's settings. Please note that disabling location access will prevent the app from providing weather information for your current location.
 
@@ -48,6 +49,3 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 Apex Creators  
 Email: apexcreators@proton.me
 
----
-
-**By using "Nothing Weather: Warm or Cold," you agree to the terms outlined in this Privacy Policy.**
