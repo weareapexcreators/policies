@@ -1,68 +1,91 @@
 # Privacy Policy for Nothing Weather: Warm or Cold
 
-**Effective Date:** 30 January 2026
+**Effective Date:** 21 February 2026
 
 ## 1. Introduction
 
-Welcome to **Nothing Weather: Warm or Cold** (the "App"), developed by **Apex Creators** ("we," "us," or "our"). We value your privacy and are committed to providing a safe and transparent experience for all users, including children.
+Welcome to **Nothing Weather: Warm or Cold** (the "App"), developed by **Apex Creators** ("we," "us," or "our"). We value your privacy and are committed to providing a transparent experience for all users.
+
+**Disclaimer:** "Nothing Weather: Warm or Cold" is an independent application developed by Apex Creators. It is **not** affiliated with, endorsed by, sponsored by, or in any way officially connected with **Nothing Technology Limited** or any of its subsidiaries or affiliates. The word "Nothing" in the app name reflects a minimalist design philosophy and does not imply any brand association.
 
 This Privacy Policy explains how information is accessed, used, and stored when you use the App.
 
 ## 2. Information We Collect
 
-The App itself does not directly collect, store, or retain any personally identifiable information (PII) such as your name, email address, or phone number on our servers.
+The App does not collect, transmit, or store any personally identifiable information (PII) such as your name, email address, or phone number on any external server.
 
-However, the App interacts with your device to provide services:
+The App interacts with your device and third-party services as described below.
 
-*   **Location Data:** Accesses device location to provide local weather information.
-*   **Advertising Data:** Displays advertisements provided by third-party ad services (Google AdMob).
-*   **App Preferences:** Stores your manual city selection and settings locally on your device.
+## 3. Data Stored Locally on Your Device
 
-## 3. Location Data Usage
+The App uses on-device storage (Android SharedPreferences) to save your preferences and cache data for a better experience. The following data is stored **locally on your device only** and is never transmitted to our servers:
 
-The App requests access to your device’s location to function effectively.
+*   **Manual city name** (if you manually select a location)
+*   **Last known GPS coordinates** (latitude and longitude, cached temporarily for location-change detection to avoid unnecessary API calls)
+*   **Cached weather data** (JSON response from the weather API, for offline access and faster load times; expires after 6 hours)
+*   **Yesterday's temperature** (cached for the "warmer or colder" comparison feature)
+*   **Temperature unit preference** (Celsius or Fahrenheit)
+*   **App language preference**
+*   **Font style preference**
+*   **Daily notification preference** (enabled or disabled)
+*   **Onboarding completion status**
 
-*   **Precise Location (GPS):** We access your precise location **transiently** to fetch accurate weather data for your current position. This specific GPS data is processed in real-time and is **not stored** permanently on your device or our servers.
-*   **Manual Location:** If you manually select a city, we strictly save the **city name** locally on your device (in Shared Preferences) to remember your choice for your next visit.
-*   **User Control:** You can disable location access at any time through your device settings. If disabled, you can still use the App by manually searching for a city.
+All of this data can be cleared at any time by clearing the App's data or uninstalling the App.
 
-## 4. Advertising & Third-Party Services
+## 4. Location Data Usage
 
-The App displays ads using **Google AdMob**.
+The App requests access to your device's location (both `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION` Android permissions) to provide weather data for your current position.
 
-**Google AdMob** may collect and use data to serve personalized or non-personalized ads, specifically:
+*   **GPS Data:** Your precise location is used to fetch weather data from our weather data provider. Your last-known coordinates are cached locally on your device (as described in Section 3) for location-change detection. This data is **not** sent to any server controlled by us.
+*   **Manual Location:** If you manually select a city, the city name is saved locally on your device.
+*   **User Control:** You can revoke location access at any time through your device's system settings. If location access is disabled, you can still use the App by manually searching for a city.
 
-*   **Identifiers:** Advertising ID (e.g., Android Advertising ID).
-*   **Usage Data:** Ad interactions (views, clicks), crash logs, and performance data.
-*   **Diagnostics:** Device model, OS version, and network type.
+## 5. Advertising & Third-Party Services
 
-**European & UK Users (GDPR/UK GDPR):**
-We request your consent before showing personalized ads. You can manage your consent preferences at any time within the App's settings under "Ad Privacy".
+### 5.1 Google AdMob
 
-Learn more about how Google uses data: [Google Privacy & Terms](https://policies.google.com/privacy) and [AdMob Privacy](https://support.google.com/admob/answer/6128543).
+The App displays interstitial advertisements using **Google AdMob** (via the Google Mobile Ads SDK). The App declares the `com.google.android.gms.permission.AD_ID` permission in its Android Manifest, which allows the Google Mobile Ads SDK to access the Android Advertising ID.
 
-## 5. Weather Data Providers
+Google AdMob may collect and process data including:
+*   **Advertising ID** (Android Advertising ID)
+*   **Device information** (device model, OS version, network type)
+*   **Ad interaction data** (views, clicks)
+*   **App performance and diagnostics data**
 
-To provide weather information, the App communicates with third-party weather APIs. We send only the minimum necessary data (your coordinates or city name) to retrieve the forecast. We do not share your personal identity with these providers.
+For details on what data Google collects and how it is used, please refer to:
+*   [Google Privacy Policy](https://policies.google.com/privacy)
+*   [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites)
 
-## 6. Children’s Privacy (COPPA & Google Play Families)
+**For users in the European Economic Area (EEA), UK, and Switzerland:**
+The App implements Google's **User Messaging Platform (UMP) SDK** to request consent before serving ads, in compliance with the GDPR and ePrivacy Directive. If consent is required, a consent form will be presented when you first open the App. You can manage or revoke your consent at any time via the **"Ad Privacy"** option in the App's Settings screen (this option only appears for users in applicable regions).
 
-Nothing Weather: Warm or Cold is designed to be family-friendly and complies with the **Children’s Online Privacy Protection Act (COPPA)** and **Google Play Family Policy Requirements**.
+### 5.2 WeatherAPI.com
 
-*   We do not knowingly collect personal information from children under 13.
-*   The App is configured to request **family-safe ads** suitable for all audiences.
-*   If we discover that personal information of a child has been inadvertently collected, we will delete it immediately.
+The App uses **WeatherAPI.com** to retrieve weather data. When making a request, the App sends your coordinates (latitude and longitude) or your manually-selected city name to the WeatherAPI.com servers. No other personal information is shared with this provider.
+*   [WeatherAPI.com Privacy Policy](https://www.weatherapi.com/privacy.aspx)
+*   [WeatherAPI.com Terms of Service](https://www.weatherapi.com/terms.aspx)
 
-## 7. Data Security & Retention
+## 6. Notifications
 
-*   **Security:** We take reasonable measures to protect the limited data processed by the App.
-*   **Retention:** Manual location preferences are retained on your device until you clear the App's data or uninstall the App. No data is retained on external servers by us.
+The App uses **local notifications only** (via the `flutter_local_notifications` package). These notifications are scheduled and displayed entirely on your device. No push notification service or remote server is involved. You can enable or disable daily morning weather notifications from the App's Settings screen, or disable notifications entirely via your device's system settings.
 
-## 8. Changes to This Privacy Policy
+## 7. Home Screen Widgets
 
-We may update this Privacy Policy to reflect changes in our practices or regulations. Any changes will be posted on this page with an updated effective date. Continued use of the App indicates acceptance of the revised policy.
+The App provides home screen widgets that display weather information. Widget data (such as temperature, weather description, and location name) is stored locally on your device using the Android widget framework. No data is transmitted externally for widget functionality.
 
-## 9. Contact Us
+## 8. Data Security
+
+All network requests made by the App (to WeatherAPI.com and Google AdMob) are transmitted over secure **HTTPS** connections. The App does not operate its own backend servers and does not store any user data externally.
+
+## 9. Children's Privacy
+
+We do not knowingly collect personal information from children under 13. The App does not have any age-gating mechanism or user accounts.
+
+## 10. Changes to This Privacy Policy
+
+We may update this Privacy Policy to reflect changes in our practices or applicable regulations. Any changes will be posted on this page with an updated effective date. Continued use of the App after changes are posted indicates acceptance of the revised policy.
+
+## 11. Contact Us
 
 If you have any questions or concerns about this Privacy Policy, please contact us:
 
