@@ -1,0 +1,46 @@
+Privacy Policy for LocalAI – Offline AI Chat LLM
+
+Effective Date: February 27, 2026
+
+1. Introduction
+Welcome to LocalAI – Offline AI Chat LLM ("the App"), developed and maintained by Apex Creators ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have complete control over your data. Because LocalAI is designed as an offline inference engine, our privacy practices are exceptionally straightforward: what happens on your device stays on your device.
+
+This Privacy Policy explains how we handle data when you use the App. By using the App, you agree to the practices described in this policy.
+
+2. Information We Do Not Collect
+We believe that privacy is a fundamental right, especially when interacting with Artificial Intelligence. To that end, LocalAI is built with a strict "No Telemetry, No Tracking" architecture:
+
+- No Account Required: We do not require you to create an account, provide an email address, or share any personal identity information to use the App.
+- No Chat Logs Collection: Your conversation history, prompts, and AI-generated responses are stored exclusively in a local SQLite database on your device. We NEVER transmit, collect, or monitor your chat data.
+- No Document or Image Uploads: When you use the App's vision or document-parsing features, the files and photos you attach are processed locally by the AI model entirely on your hardware. We do not upload your files to any cloud server.
+- No Telemetry or Analytics: We do not integrate third-party analytics SDKs (e.g., Google Analytics, Firebase Analytics, Flurry) or crash-reporting tools that harvest device data, usage metrics, or screen interactions.
+
+3. External Network Connections
+While LocalAI is primarily an offline application, it does require a temporary internet connection for one specific feature: The Model Hub.
+
+- Hugging Face Integration: To allow you to discover and download open-source Large Language Models (LLMs) like LLaMA, DeepSeek, Qwen, and others, the App makes secure API requests to Hugging Face (huggingface.co).
+- Data Exchanged during Downloads: When browsing or downloading models, your device communicates standard network routing data (such as your IP address) directly to Hugging Face's servers in order to retrieve the model files. We do not track which models you download. For information on how Hugging Face handles network requests, please review their privacy policy.
+
+Once a model is downloaded to your device, the AI inference requires absolutely no internet connection.
+
+4. Local Device Permissions
+To function properly, LocalAI may request the following device permissions. All data accessed via these permissions remains strictly on your device:
+
+- Storage/Files Permission: Required to save downloaded AI models (.gguf files), to read documents (PDFs, Word docs, etc.) that you explicitly attach to a chat, and to store your chat history locally.
+- Camera/Photos Permission: Required only if you choose to take a photo or attach an image from your gallery to chat with a Vision-capable AI model.
+
+5. Third-Party Links
+Our App may contain links to third-party websites (such as the Hugging Face website or project repositories). We are not responsible for the privacy practices or content of these external sites.
+
+6. Children’s Privacy
+LocalAI does not knowingly collect personal information from children under the age of 13, as we do not collect personal information from anyone. If you are a parent or guardian and believe your child has provided us with personal data somehow, please contact us so we can investigate.
+
+7. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. Any changes will be reflected by an updated "Effective Date" at the top of this document. Since we do not collect contact information, we cannot notify users directly of changes; we encourage you to review this policy periodically in the app store or via our website.
+
+8. Contact Us
+If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
+
+Apex Creators
+Email: info@apexcreators.co.in
+Website: https://www.apexcreators.co.in
