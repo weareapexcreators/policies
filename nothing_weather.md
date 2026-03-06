@@ -20,18 +20,7 @@ The App stores the following data **locally on your device only**:
 
 **This data is never transmitted to our servers or any third parties.**
 
-### 1.2 Advertising Data
-We use **Google AdMob** to display interstitial advertisements. AdMob may collect:
-- Device identifiers (Advertising ID)
-- IP address
-- General location and device information
-- Ad interaction data and app performance data
-
-Users in the European Economic Area (EEA), UK, and Switzerland are presented with a consent form via Google's User Messaging Platform (UMP) SDK. You can manage consent via the "Ad Privacy" option in the App's Settings.
-
-For more information, see [Google's Privacy Policy](https://policies.google.com/privacy).
-
-### 1.3 Weather Provider Data
+### 1.2 Weather Provider Data
 We use **WeatherAPI.com** to retrieve weather forecasts. When making a request, the App sends your coordinates (latitude and longitude) or your manually-selected city name directly to WeatherAPI.com. No other personal information is shared with this provider.
 
 ---
@@ -39,14 +28,13 @@ We use **WeatherAPI.com** to retrieve weather forecasts. When making a request, 
 ## 2. How We Use Information
 
 - **Local Data:** Used solely to provide app functionality (weather display, daily comparison, caching, and personalized settings). Never shared externally.
-- **Advertising Data:** Used by Google to serve relevant advertisements.
 - **Location Data:** Used solely to fetch accurate local weather forecasts from our Weather Provider.
 
 ---
 
 ## 3. Data Storage & Security
 
-All personal preferences and cached weather data are stored locally using Android SharedPreferences on your device. Widget data is also stored locally using the Android widget framework. All network requests to third parties (WeatherAPI.com and Google AdMob) are transmitted securely over HTTPS. We do not have access to your local data. If you uninstall the App, all local data is permanently deleted.
+All personal preferences and cached weather data are stored locally using Android SharedPreferences on your device. Widget data is also stored locally using the Android widget framework. All network requests to third parties (WeatherAPI.com) are transmitted securely over HTTPS. We do not have access to your local data. If you uninstall the App, all local data is permanently deleted.
 
 ---
 
@@ -54,7 +42,6 @@ All personal preferences and cached weather data are stored locally using Androi
 
 | Service | Purpose | Privacy Policy |
 |---------|---------|----------------|
-| Google AdMob | Advertising | [Link](https://policies.google.com/privacy) |
 | WeatherAPI.com | Weather Data | [Link](https://www.weatherapi.com/privacy.aspx) |
 
 ---
@@ -70,8 +57,6 @@ The App is not intended for children under 13. We do not knowingly collect perso
 You can:
 - Delete all app data and local cache by clearing the App's data or uninstalling the App
 - Revoke location permissions at any time via device settings
-- Manage personalized ad consent via the "Ad Privacy" setting (if applicable in your region)
-- Reset your Advertising ID in device settings
 
 ---
 
