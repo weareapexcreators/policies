@@ -1,51 +1,252 @@
 Privacy Policy for LocalAI – Offline AI Chat LLM
 
-Effective Date: February 27, 2026
+Effective Date: June 14, 2026
+
+================================================================================
 
 1. Introduction
-Welcome to LocalAI – Offline AI Chat LLM ("the App"), developed and maintained by Apex Creators ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have complete control over your data. Because LocalAI is designed as an offline inference engine, our privacy practices are exceptionally straightforward: what happens on your device stays on your device.
 
-This Privacy Policy explains how we handle data when you use the App. By using the App, you agree to the practices described in this policy.
+Welcome to LocalAI – Offline AI Chat LLM ("the App"), developed and maintained
+by Apex Creators ("we," "our," or "us"). We are committed to protecting your
+privacy and ensuring you have complete control over your data. Because LocalAI
+is designed as an offline inference engine, our privacy practices are
+exceptionally straightforward: what happens on your device stays on your device.
+
+This Privacy Policy explains how we handle data when you use the App. By using
+the App, you agree to the practices described in this policy.
+
+================================================================================
 
 2. Information We Do Not Collect
-We believe that privacy is a fundamental right, especially when interacting with Artificial Intelligence. To that end, LocalAI is built with a strict "No Telemetry, No Tracking" architecture:
 
-- No Account Required: We do not require you to create an account, provide an email address, or share any personal identity information to use the App.
-- No Chat Logs Collection: Your conversation history, prompts, and AI-generated responses are stored exclusively in a local SQLite database on your device. We NEVER transmit, collect, or monitor your chat data.
-- No Document or Image Uploads: When you use the App's vision or document-parsing features, the files and photos you attach are processed locally by the AI model entirely on your hardware. We do not upload your files to any cloud server.
-- No Conversation or File Telemetry: We NEVER collect, monitor, or upload your conversation history, prompts, AI responses, images, or documents. All AI processing is strictly offline and local to your device.
+We believe that privacy is a fundamental right, especially when interacting with
+Artificial Intelligence. To that end, LocalAI is built with a strict
+"No Telemetry, No Tracking" architecture:
+
+- No Account Required: We do not require you to create an account, provide an
+  email address, or share any personal identity information to use the App.
+
+- No Chat Logs Collection: Your conversation history, prompts, and AI-generated
+  responses are stored exclusively in a local SQLite database on your device.
+  We NEVER transmit, collect, or monitor your chat data.
+
+- No Document or Image Uploads: When you use the App's vision or
+  document-parsing features, the files and photos you attach are processed
+  locally by the AI model entirely on your hardware. We do not upload your
+  files to any cloud server.
+
+- No Conversation or File Telemetry: We NEVER collect, monitor, or upload your
+  conversation history, prompts, AI responses, images, or documents. All AI
+  processing is strictly offline and local to your device.
+
+================================================================================
 
 3. Analytics and Crashlytics
-To improve the stability, speed, and performance of the App, we utilize Google Firebase Analytics and Crashlytics:
-- Anonymized Usage Metrics: We log anonymized usage events (such as model download starts, download speeds, model load times, and token inference speeds) to optimize our on-device memory management guards.
-- Anonymized Crash Reports: In the event of a crash, anonymized logs and stack traces are transmitted to help us detect and debug system crashes.
-- Complete Privacy: No personal identification details, account data, location data, or text/image prompts are ever collected or sent to Firebase.
 
-4. External Network Connections
-While LocalAI is primarily an offline application, it does require a temporary internet connection for:
-- The Model Hub: Discovering and downloading open-source Large Language Models (LLMs) like LLaMA, DeepSeek, Qwen, and others via Hugging Face (huggingface.co).
-- Data Exchanged during Downloads: When downloading models, your device communicates standard network routing data (such as your IP address) directly to Hugging Face. We do not track which models you download.
+To improve the stability, speed, and performance of the App, we utilize Google
+Firebase Analytics and Crashlytics:
 
-Once a model is downloaded to your device, the AI inference requires absolutely no internet connection.
+- Anonymized Usage Metrics: We log anonymized usage events (such as model
+  download starts, download speeds, model load times, and token inference
+  speeds) to optimize our on-device memory management guards.
 
-5. Local Device Permissions
-To function properly, LocalAI may request the following device permissions. All data accessed via these permissions remains strictly on your device:
+- Anonymized Crash Reports: In the event of a crash, anonymized logs and stack
+  traces are transmitted to help us detect and debug system crashes.
 
-- Storage/Files Permission: Required to save downloaded AI models (.gguf files), to read documents (PDFs, Word docs, etc.) that you explicitly attach to a chat, and to store your chat history locally.
-- Camera/Photos Permission: Required only if you choose to take a photo or attach an image from your gallery to chat with a Vision-capable AI model.
+- Complete Privacy: No personal identification details, account data, location
+  data, or text/image prompts are ever collected or sent to Firebase.
 
-6. Third-Party Links
-Our App may contain links to third-party websites (such as the Hugging Face website or project repositories). We are not responsible for the privacy practices or content of these external sites.
+================================================================================
 
-7. Children’s Privacy
-The App is not intended for use by children under the age of 13. We do not knowingly collect, maintain, or use personal information from children under 13, as we do not collect personal information from anyone. Furthermore, because the App can download and interact with open-source Large Language Models (LLMs) that may generate unpredictable content, we strongly advise that individuals under the age of 18 use the App only under parental supervision. If you are a parent or guardian and believe your child has provided us with personal data somehow, please contact us so we can investigate.
+4. Advertising – Google AdMob
 
-8. Changes to This Privacy Policy
-We may update this Privacy Policy from time to time. Any changes will be reflected by an updated "Effective Date" at the top of this document. Since we do not collect contact information, we cannot notify users directly of changes; we encourage you to review this policy periodically in the app store or via our website.
+The App displays advertisements served by Google AdMob, a mobile advertising
+platform operated by Google LLC. By integrating AdMob, we are required by
+Google's Publisher Policies to clearly disclose how AdMob collects and uses
+data when ads are displayed to you.
 
-9. Contact Us
-If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
+------------------------------------------------------------
+4.1 Data Collected Automatically by the Google Mobile Ads SDK
+------------------------------------------------------------
 
-Apex Creators
-Email: info@apexcreators.co.in
-Website: https://www.apexcreators.co.in
+The Google Mobile Ads SDK (GMA SDK) automatically collects and shares the
+following data for the purposes of advertising, analytics, and fraud prevention:
+
+- IP Address:
+  Your device's IP address, which may be used to estimate your general
+  geographic location.
+
+- User Interactions:
+  Information about how you interact with the app, including app launches, taps,
+  and video views. Performance data such as app launch time, hang rate, or
+  energy usage may also be collected to evaluate user behavior and improve
+  product features. This data may be used for displaying ads, including sharing
+  with other entities that display ads.
+
+- Device Identifiers:
+  Your device's advertising identifier (Android Advertising ID / IDFA on iOS)
+  or other app- or developer-bounded device identifiers, which may be used for
+  third-party advertising and analytics.
+
+- Diagnostic Information:
+  Non-user-related crash logs and SDK performance data used to diagnose problems
+  and improve the SDK. This information may also be used for advertising and
+  analytics purposes.
+
+All data collected by the Google Mobile Ads SDK is encrypted in transit using
+TLS (Transport Layer Security).
+
+------------------------------------------------------------
+4.2 Personalized vs. Non-Personalized Ads
+------------------------------------------------------------
+
+AdMob may serve personalized (interest-based) ads using your advertising ID and
+inferred demographic categories. You may opt out of personalized advertising at
+any time through your device settings:
+
+- Android: Settings > Google > Ads > "Delete advertising ID"
+           or "Opt out of Ads Personalization"
+- iOS:     Settings > Privacy > Tracking > disable "Allow Apps to Request to
+           Track", and Settings > Privacy > Apple Advertising > disable
+           "Personalized Ads"
+
+------------------------------------------------------------
+4.3 Advertising ID Controls
+------------------------------------------------------------
+
+Users may reset or delete their Advertising ID at any time through their
+device's ad settings. On Android 13 and above, you can delete the advertising
+ID entirely, after which it will be replaced with a string of zeros and no
+personalized ads will be served.
+
+------------------------------------------------------------
+4.4 EU / EEA, UK & Switzerland Users – GDPR Consent
+------------------------------------------------------------
+
+Under the Google EU User Consent Policy, if you are located in the European
+Economic Area (EEA), the United Kingdom (UK), or Switzerland, the App will
+display a consent dialog before serving personalized ads. This is required under
+the EU ePrivacy Directive and the General Data Protection Regulation (GDPR).
+You may withdraw your consent at any time through the App's settings or your
+device's ad controls.
+
+------------------------------------------------------------
+4.5 US State Privacy Laws
+------------------------------------------------------------
+
+For users in US states with applicable privacy laws (including but not limited
+to California CPRA, Virginia VCDPA, Colorado CPA, and others), Google AdMob
+supports Restricted Data Processing (RDP) and the Global Privacy Platform (GPP)
+signal. Where required by law, we will limit data processing and honor opt-out
+requests for the sale or sharing of personal data for targeted advertising.
+
+------------------------------------------------------------
+4.6 Children and AdMob
+------------------------------------------------------------
+
+We do not knowingly serve personalized ads to children under the age of 13 (or
+under the applicable age of digital consent in your region). Where required, we
+apply Google's child-directed treatment tags (TFCD / TFUA) to ensure that the
+advertising ID and other identifiers are not transmitted for child-directed ad
+requests. See also Section 8 (Children's Privacy).
+
+------------------------------------------------------------
+4.7 Google's Privacy Policy & AdMob Resources
+------------------------------------------------------------
+
+The data collected via AdMob is governed by Google's own Privacy Policy.
+For full details on how Google collects and uses this data, please visit:
+
+  Google Privacy Policy:   https://policies.google.com/privacy
+  AdMob Help Center:       https://support.google.com/admob/answer/6128543
+  How Google uses data:    https://policies.google.com/technologies/partner-sites
+
+================================================================================
+
+5. External Network Connections
+
+While LocalAI is primarily an offline application, it does require a temporary
+internet connection for:
+
+- The Model Hub: Discovering and downloading open-source Large Language Models
+  (LLMs) like LLaMA, DeepSeek, Qwen, and others via Hugging Face
+  (huggingface.co).
+
+- Data Exchanged during Downloads: When downloading models, your device
+  communicates standard network routing data (such as your IP address) directly
+  to Hugging Face. We do not track which models you download.
+
+- Ad Serving: When advertisements are displayed, the Google Mobile Ads SDK
+  communicates with Google's ad servers as described in Section 4 above.
+
+Once a model is downloaded to your device, all AI inference requires absolutely
+no internet connection.
+
+================================================================================
+
+6. Local Device Permissions
+
+To function properly, LocalAI may request the following device permissions.
+All data accessed via these permissions remains strictly on your device, except
+where used by Google AdMob as described in Section 4:
+
+- Storage / Files Permission: Required to save downloaded AI models (.gguf
+  files), to read documents (PDFs, Word docs, etc.) that you explicitly attach
+  to a chat, and to store your chat history locally.
+
+- Camera / Photos Permission: Required only if you choose to take a photo or
+  attach an image from your gallery to chat with a Vision-capable AI model.
+
+================================================================================
+
+7. Third-Party Links and Services
+
+Our App may contain links to third-party websites (such as the Hugging Face
+website or open-source project repositories). We are not responsible for the
+privacy practices or content of these external sites.
+
+Additionally, Google AdMob is a third-party advertising service integrated into
+the App. AdMob operates under Google's own terms of service and privacy policies,
+which are independent of this Privacy Policy. We encourage you to review
+Google's Privacy Policy at https://policies.google.com/privacy.
+
+================================================================================
+
+8. Children's Privacy
+
+The App is not intended for use by children under the age of 13. We do not
+knowingly collect, maintain, or use personal information from children under 13,
+as we do not collect personal information from anyone.
+
+Furthermore, because the App can download and interact with open-source Large
+Language Models (LLMs) that may generate unpredictable content, we strongly
+advise that individuals under the age of 18 use the App only under parental
+supervision.
+
+Regarding advertising: we do not knowingly serve personalized ads to children.
+If you are a parent or guardian and believe your child has been exposed to
+personalized advertising through this App or has provided personal data,
+please contact us immediately at the address in Section 10.
+
+================================================================================
+
+9. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. Any changes will be
+reflected by an updated "Effective Date" at the top of this document. Since we
+do not collect contact information, we cannot notify users directly of changes;
+we encourage you to review this policy periodically in the app store or via our
+website.
+
+================================================================================
+
+10. Contact Us
+
+If you have any questions or concerns about this Privacy Policy or our data
+practices, please contact us at:
+
+  Apex Creators
+  Email:   info@apexcreators.co.in
+  Website: https://www.apexcreators.co.in
+
+================================================================================
