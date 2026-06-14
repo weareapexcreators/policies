@@ -66,6 +66,29 @@
             margin: 24px 0;
             font-style: italic;
         }
+        .admob-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+        .admob-box p, .admob-box li {
+            color: #1e40af;
+            font-size: 15px;
+        }
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 99px;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
         .footer {
             margin-top: 60px;
             padding-top: 30px;
@@ -80,9 +103,9 @@
 
 <div class="container">
     <h1>Privacy Policy</h1>
-    <p class="subtitle"><strong>Last updated:</strong> April 5, 2026</p>
+    <p class="subtitle"><strong>Last updated:</strong> June 14, 2026</p>
 
-    <p>Aesthetic Desk Clock & Timer is an independent application developed by <strong>Apex Creators</strong>. We are committed to protecting your privacy and ensuring that your experience using our app is safe and secure.</p>
+    <p>Aesthetic Desk Clock &amp; Timer is an independent application developed by <strong>Apex Creators</strong>. We are committed to protecting your privacy and ensuring that your experience using our app is safe and secure.</p>
 
     <div class="highlight-box">
         This Privacy Policy describes our policies regarding the collection, use, and disclosure of information when you use our application. By using the app, you agree to the terms outlined here.
@@ -90,7 +113,7 @@
 
     <h2>1. Definitions</h2>
     <ul>
-        <li><strong>App:</strong> Aesthetic Desk Clock & Timer</li>
+        <li><strong>App:</strong> Aesthetic Desk Clock &amp; Timer</li>
         <li><strong>Company:</strong> Apex Creators ("we", "us", or "our")</li>
         <li><strong>Device:</strong> Any smartphone, tablet, or device capable of running the App</li>
         <li><strong>Service:</strong> The mobile application and its related functions</li>
@@ -108,15 +131,58 @@
     </ul>
 
     <h3>Weather and Location Data</h3>
-    <p>The App **does not** collect GPS location data in the background. To display weather information:</p>
+    <p>The App does <strong>not</strong> collect GPS location data in the background. To display weather information:</p>
     <ul>
         <li>Users manually enter a city name/location.</li>
         <li>This city name is stored <strong>locally</strong> on your device.</li>
         <li>It is sent to our weather provider solely to retrieve current conditions.</li>
     </ul>
 
-    <h2>3. Transparency: No Advertisements</h2>
-    <p>Aesthetic Desk Clock & Timer is a <strong>clean, ad-free experience</strong>. We do not use Google AdMob or any other advertising SDKs. No advertising identifiers or interaction data are shared with ad networks.</p>
+    <h2>3. Advertising – Google AdMob</h2>
+
+    <p>The App displays advertisements served by <strong>Google AdMob</strong>, a mobile advertising platform operated by Google LLC. In compliance with Google's Publisher Policies (updated June 2026), we disclose the following about how AdMob collects and uses your data.</p>
+
+    <h3>3.1 Data Collected Automatically by the Google Mobile Ads SDK</h3>
+    <p>The Google Mobile Ads SDK (GMA SDK) automatically collects and shares the following data for the purposes of advertising, analytics, and fraud prevention:</p>
+    <ul>
+        <li><strong>IP Address:</strong> Used to estimate your approximate geographic location for ad relevance.</li>
+        <li><strong>Device Identifiers:</strong> Your Android Advertising ID (GAID), used for interest-based ad targeting and analytics.</li>
+        <li><strong>User Interactions:</strong> App launch events, ad impressions, and tap interactions, used to measure ad performance and user engagement.</li>
+        <li><strong>Diagnostic Data:</strong> Non-personal crash logs and SDK performance metrics used to improve ad delivery stability.</li>
+    </ul>
+    <p>All data collected by the Google Mobile Ads SDK is <strong>encrypted in transit using TLS</strong> (Transport Layer Security).</p>
+
+    <h3>3.2 Personalized vs. Non-Personalized Ads</h3>
+    <p>AdMob may serve personalized (interest-based) ads using your advertising ID. You may opt out of personalized advertising at any time through your device settings:</p>
+    <ul>
+        <li><strong>Android:</strong> Settings &rarr; Google &rarr; Ads &rarr; "Delete advertising ID" or "Opt out of Ads Personalization"</li>
+    </ul>
+
+    <h3>3.3 Advertising ID Controls</h3>
+    <p>You may reset or delete your Advertising ID at any time through your device's ad settings. On Android 13 and above, deleting the advertising ID replaces it with a string of zeros, after which no personalized ads will be served.</p>
+
+    <h3>3.4 EU / EEA, UK &amp; Switzerland – GDPR Consent</h3>
+    <div class="admob-box">
+        <span class="tag">GDPR</span>
+        <p>If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, the App will display a consent dialog before serving personalized ads. This is required under the EU ePrivacy Directive and the General Data Protection Regulation (GDPR) as per Google's EU User Consent Policy. You may withdraw your consent at any time through the App's settings or your device's ad controls.</p>
+    </div>
+
+    <h3>3.5 US State Privacy Laws</h3>
+    <div class="admob-box">
+        <span class="tag">CCPA / CPRA</span>
+        <p>For users in US states with applicable privacy laws (including California CPRA, Virginia VCDPA, Colorado CPA, and others), Google AdMob supports Restricted Data Processing (RDP) and honors the Global Privacy Platform (GPP) signal. Where required by law, we limit data processing and honor opt-out requests for the sale or sharing of personal data for targeted advertising.</p>
+    </div>
+
+    <h3>3.6 Children and Advertising</h3>
+    <p>We do not knowingly serve personalized ads to children under 13. Where required, we apply Google's child-directed treatment tags (TFCD / TFUA) to ensure that the Advertising ID and other identifiers are not transmitted for child-directed ad requests. See also Section 6 (Children's Privacy).</p>
+
+    <h3>3.7 Google's Privacy Policy &amp; AdMob Resources</h3>
+    <p>Data collected via AdMob is governed by Google's own Privacy Policy. For full details:</p>
+    <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Help Center – How AdMob uses data</a></li>
+        <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">How Google uses data from apps that use its services</a></li>
+    </ul>
 
     <h2>4. Third-Party Services</h2>
     <p>We use a limited number of trusted service providers to power the App's features:</p>
@@ -133,22 +199,27 @@
     <p>Used to provide the premium typography found in our watch faces. Fonts are loaded and processed according to Google's privacy standards.</p>
     <p><a href="https://developers.google.com/fonts/faq/privacy" target="_blank">Google Fonts Privacy FAQ</a></p>
 
-    <h2>5. Data Storage & Security</h2>
+    <h3>Google AdMob</h3>
+    <p>Used to serve advertisements within the App. Full disclosure is provided in Section 3 above.</p>
+    <p><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Privacy &amp; Data FAQ</a></p>
+
+    <h2>5. Data Storage &amp; Security</h2>
     <p>All your settings, including color themes, font choices, and weather locations, are stored <strong>on your device</strong> using local storage. We do not maintain a server-side database of user preferences.</p>
 
     <h2>6. Children's Privacy</h2>
-    <p>Our App is suitable for all ages. We do not knowingly collect or request personal information from children under the age of 13. If you believe a child has provided us with data, please contact us so we can delete it.</p>
+    <p>Our App is suitable for all ages. We do not knowingly collect or request personal information from children under the age of 13. Regarding advertising, we do not knowingly serve personalized ads to children and apply appropriate child-directed treatment flags where applicable. If you believe a child has provided us with personal data, please contact us immediately so we can investigate and delete it.</p>
 
     <h2>7. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy to reflect changes in our practices or for legal reasons. We recommend reviewing this page periodically for updates.</p>
+    <p>We may update this Privacy Policy to reflect changes in our practices or for legal reasons. We recommend reviewing this page periodically for updates. The "Last updated" date at the top of this page will always reflect the most recent revision.</p>
 
     <h2>8. Contact Us</h2>
     <p>If you have any questions or feedback regarding your privacy, please reach out to us:</p>
     <p><strong>Email:</strong> <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
+    <p><strong>Website:</strong> <a href="https://www.apexcreators.co.in" target="_blank">https://www.apexcreators.co.in</a></p>
 
     <div class="footer">
-        © 2026 Apex Creators. All rights reserved.<br>
-        Aesthetic Desk Clock & Timer
+        &copy; 2026 Apex Creators. All rights reserved.<br>
+        Aesthetic Desk Clock &amp; Timer
     </div>
 </div>
 
