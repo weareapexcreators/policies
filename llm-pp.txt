@@ -35,9 +35,11 @@ Artificial Intelligence. To that end, LocalAI is built with a strict
   locally by the AI model entirely on your hardware. We do not upload your
   files to any cloud server.
 
-- No Conversation or File Telemetry: We NEVER collect, monitor, or upload your
-  conversation history, prompts, AI responses, images, or documents. All AI
-  processing is strictly offline and local to your device.
+- No Conversation or File Telemetry: By default (when using local models), we
+  NEVER collect, monitor, or upload your conversation history, prompts, AI
+  responses, images, or documents. All AI processing is strictly offline and
+  local to your device. If you explicitly choose to use a Cloud Provider (BYOK),
+  your data is handled according to that provider's policies (see Section 5).
 
 ================================================================================
 
@@ -179,8 +181,16 @@ internet connection for:
 - Ad Serving: When advertisements are displayed, the Google Mobile Ads SDK
   communicates with Google's ad servers as described in Section 4 above.
 
-Once a model is downloaded to your device, all AI inference requires absolutely
-no internet connection.
+- Cloud Providers (BYOK): If you choose to enable "Cloud Providers" and supply
+  your own API key (e.g., OpenAI, Anthropic, OpenRouter), your chat prompts,
+  conversation history, and attached images/documents for that session will be
+  transmitted directly to the respective third-party provider's API for processing.
+  We do not proxy or intercept this data. Your API keys are stored securely
+  on your device's encrypted keystore and are never transmitted to us. Please
+  review the privacy policy of the specific cloud provider you choose to use.
+
+Once a local model is downloaded to your device and you are not using a Cloud
+Provider, all AI inference requires absolutely no internet connection.
 
 ================================================================================
 
