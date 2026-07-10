@@ -19,16 +19,14 @@
     --danger: #ff4d3d;
   }
   * { box-sizing: border-box; }
-  html, body {
-    background: var(--bg);
-  }
+  html, body { background: var(--bg); }
   body {
     margin: 0;
     color: var(--text);
     font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace;
     font-size: 15px;
     line-height: 1.7;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
 
   /* ---------- signature: live LED matrix banner ---------- */
@@ -81,6 +79,13 @@
   h1::before { content: "// "; color: var(--amber); }
 
   .subtitle { color: var(--muted); margin: 0 0 8px; font-size: 0.92rem; }
+  .attribution {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin: 0 0 8px;
+  }
+  .attribution a { color: var(--amber-dim); text-decoration: none; border-bottom: 1px dotted var(--amber-dim); }
+  .attribution a:hover { color: var(--amber); border-bottom-color: var(--amber); }
 
   h2 {
     font-family: 'Share Tech Mono', monospace;
@@ -107,15 +112,8 @@
   strong { color: #fff; font-weight: 700; }
   em { color: var(--muted); font-style: normal; }
 
-  .dotrule {
-    display: flex;
-    gap: 6px;
-    margin: 44px 0;
-  }
-  .dotrule span {
-    width: 4px; height: 4px; border-radius: 50%;
-    background: var(--dot-off);
-  }
+  .dotrule { display: flex; gap: 6px; margin: 44px 0; }
+  .dotrule span { width: 4px; height: 4px; border-radius: 50%; background: var(--dot-off); }
   .dotrule span:nth-child(3n) { background: var(--amber-dim); }
 
   code {
@@ -134,12 +132,7 @@
     overflow-x: auto;
     margin: 14px 0 26px;
   }
-  pre code {
-    background: none;
-    color: #d9d6c9;
-    padding: 0;
-    font-size: 0.85rem;
-  }
+  pre code { background: none; color: #d9d6c9; padding: 0; font-size: 0.85rem; }
 
   .footer {
     margin-top: 60px;
@@ -148,9 +141,11 @@
     color: var(--muted);
     font-size: 0.78rem;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
     text-align: center;
   }
+  .footer a { color: var(--amber-dim); text-decoration: none; }
+  .footer a:hover { color: var(--amber); }
+  .footer .brand { text-transform: uppercase; }
 </style>
 </head>
 <body>
@@ -165,14 +160,13 @@
 <div class="wrap">
 
 <h1>Pattern Coding Guide</h1>
-<p class="subtitle">LED Banner Custom Pattern Creator — Code Lab reference</p>
+<p class="subtitle">LED Banner: Matrix &amp; Pixel Art — Code Lab reference</p>
+<p class="attribution">Built by <a href="https://www.apexcreators.co.in/" target="_blank" rel="noopener">Apex Creators</a> · <a href="https://play.google.com/store/apps/details?id=com.ApexCreator.thebannerapp" target="_blank" rel="noopener">Get it on Google Play</a></p>
 
 <p>Welcome to the <strong>LED Banner Custom Pattern Creator</strong>.</p>
 <p>The Code Lab within the app allows you to programmatically generate complex static patterns and high-performance, multi-frame animations using pure JavaScript. This guide covers everything from basic syntax to advanced mathematical rendering techniques.</p>
 
-<div class="dotrule">
-  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-</div>
+<div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <h2>1. How the engine works (the pixel shader model)</h2>
 <p>Unlike traditional canvas drawing where you explicitly draw lines or circles, the LED Banner app uses a <strong>pixel shader model</strong>.</p>
@@ -188,9 +182,7 @@
 }
 </code></pre>
 
-<div class="dotrule">
-  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-</div>
+<div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <h2>2. API &amp; environment variables</h2>
 <p>Inside your code, you have immediate access to a rich set of environment variables and APIs to control the exact state of the LED grid.</p>
@@ -214,12 +206,11 @@
 <ul>
 <li><strong><code>api.setFrames(number)</code></strong> — tells the engine how many frames to generate. Example: <code>api.setFrames(24);</code></li>
 <li><strong><code>api.setFps(number)</code></strong> — sets the playback speed in frames per second. Example: <code>api.setFps(15);</code></li>
+<li><strong><code>api.setLoop(boolean)</code></strong> — controls whether the animation loops. Example: <code>api.setLoop(true);</code></li>
 </ul>
 <p><em>Note: call these API functions at the very top of your code, outside of any <code>if</code> statements.</em></p>
 
-<div class="dotrule">
-  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-</div>
+<div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <h2>3. Output formats (return types)</h2>
 <p>Your code <strong>must</strong> <code>return</code> a value. This value dictates the state of the current LED at position <code>(r, c)</code> on frame <code>f</code>.</p>
@@ -242,9 +233,7 @@ if ((r + c) % 2 === 0) {
 return { on: true, color: "#00FFFF" };   // Cyan
 </code></pre>
 
-<div class="dotrule">
-  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-</div>
+<div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <h2>4. Professional recipes &amp; examples</h2>
 <p>Copy and paste these directly into the Code Lab to see them in action.</p>
@@ -253,60 +242,16 @@ return { on: true, color: "#00FFFF" };   // Cyan
 <p>This creates a rainbow wave that shifts horizontally across the screen, using HSL colors for smooth hue transitions.</p>
 <pre><code>api.setFrames(30);
 api.setFps(20);
+api.setLoop(true);
 
 // Calculate hue based on column position and the current frame
 let hue = ((c / cols) * 360) + ((f / frames) * 360);
 
-// Return an HSL string which the engine converts natively
+// Return an HSL string (the engine automatically normalizes this to hex)
 return { on: true, color: `hsl(${hue}, 100%, 50%)` };
 </code></pre>
 
-<h3>Example 2 — The expanding radar (animated)</h3>
-<p>This uses trigonometry (<code>Math.atan2</code>) to draw a sweeping radar scanner from the center of the screen.</p>
-<pre><code>api.setFrames(36);
-api.setFps(24);
-
-let centerR = rows / 2;
-let centerC = cols / 2;
-
-// Calculate angle of current pixel relative to the center
-let angle = Math.atan2(r - centerR, c - centerC);
-
-// Convert angle to a 0-1 scale
-let normalizedAngle = (angle + Math.PI) / (Math.PI * 2);
-
-// Calculate the radar's sweep angle for the current frame
-let sweep = f / frames;
-
-// If the pixel's angle is very close to the sweep angle, light it up green
-if (Math.abs(normalizedAngle - sweep) &lt; 0.05) {
-  return { on: true, color: "#00FF00" };
-}
-return false;
-</code></pre>
-
-<h3>Example 3 — Dropping matrix rain (animated)</h3>
-<p>Creates falling streaks of green light.</p>
-<pre><code>api.setFrames(15);
-api.setFps(10);
-
-// Generate a pseudo-random offset for each column
-// We use the column index to keep the offset consistent per column
-let offset = (c * 7) % frames;
-
-// Check if the current row matches the falling drop calculation
-let dropPos = (f + offset) % rows;
-
-if (r === dropPos) {
-  return { on: true, color: "#00FF00" }; // Bright head
-} else if (r === (dropPos - 1 + rows) % rows) {
-  return { on: true, color: "#005500" }; // Dim tail
-}
-
-return false;
-</code></pre>
-
-<h3>Example 4 — Bouncing DVD logo / ping pong (animated)</h3>
+<h3>Example 2 — Bouncing DVD logo / ping pong (animated)</h3>
 <p>A solid block that bounces around the edges of the grid.</p>
 <pre><code>api.setFrames(60);
 api.setFps(30);
@@ -327,25 +272,83 @@ if (Math.abs(r - currentR) &lt;= 1 &amp;&amp; Math.abs(c - currentC) &lt;= 1) {
 return false;
 </code></pre>
 
-<div class="dotrule">
-  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-</div>
+<h3>Example 3 — Rotating radar sweep (animated trigonometry)</h3>
+<p>This draws a sweep scanner with a trailing fade using polar coordinates and angular distance.</p>
+<pre><code>api.setFrames(60);
+api.setFps(25);
+api.setLoop(true);
 
-<h2>5. Edge cases &amp; best practices</h2>
+let cx = (cols - 1) / 2;
+let cy = (rows - 1) / 2;
+let dx = c - cx;
+let dy = r - cy;
+
+let dist = Math.sqrt(dx * dx + dy * dy);
+let angle = Math.atan2(dy, dx);
+
+// Current sweep angle (-PI to PI)
+let sweepAngle = (f / frames) * Math.PI * 2 - Math.PI;
+
+// Angular distance from the sweep line
+let diff = Math.abs(angle - sweepAngle);
+if (diff &gt; Math.PI) diff = Math.PI * 2 - diff;
+
+// Brightness based on proximity to the sweep line
+let brightness = Math.max(0, 1 - diff * 3.5);
+
+return {
+  on: brightness &gt; 0.1,
+  color: `hsl(120, 100%, ${30 + brightness * 50}%)` // Classic green radar
+};
+</code></pre>
+
+<h3>Example 4 — Pulsing neon heartbeat (animated pulse)</h3>
+<p>Uses a central sine wave to create a pulsing/breathing neon glow effect at the core of the grid.</p>
+<pre><code>api.setFrames(30);
+api.setFps(15);
+api.setLoop(true);
+
+let cx = (cols - 1) / 2;
+let cy = (rows - 1) / 2;
+let dx = c - cx;
+let dy = r - cy;
+let dist = Math.sqrt(dx * dx + dy * dy);
+
+// Breathing pulse size over time (value between 0 and 1)
+let pulse = Math.sin((f / frames) * Math.PI * 2) * 0.5 + 0.5;
+let maxRadius = Math.min(cols, rows) * 0.4 * (0.6 + pulse * 0.4);
+
+// Active if inside the breathing radius
+let active = dist &lt;= maxRadius;
+
+// Shifting color lightness based on pulse intensity
+let lightness = 30 + pulse * 45;
+
+return {
+  on: active,
+  color: `hsl(180, 100%, ${lightness}%)` // Bright neon cyan
+};
+</code></pre>
+
+<div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<h2>5. Under the hood &amp; best practices</h2>
 <ol>
-<li><strong>Performance limit:</strong> your code executes <code>rows × cols × frames</code> times. For a 32×64 grid with 30 frames, that's over <code>60,000</code> runs per generation. Use efficient math and avoid heavy <code>while</code> loops inside the renderer.</li>
-<li><strong>Dynamic colors:</strong> use HEX (<code>#FF0000</code>), RGB (<code>rgb(255,0,0)</code>), or HSL (<code>hsl(0, 100%, 50%)</code>). HSL is recommended for smooth animations.</li>
-<li><strong>Invalid returns:</strong> if your code crashes or returns an invalid structure, the app's error boundary safely catches it and prompts you to fix your syntax.</li>
+<li><strong>High-performance SQLite storage:</strong> custom patterns are stored in a dedicated SQLite database, backed by thread-safe connection pooling. This lets you store patterns with massive frame counts (e.g. 90–120 frames at 30 FPS) without running into AsyncStorage size limits or slow loads.</li>
+<li><strong>GPU optimization via color quantization:</strong> to avoid hundreds of draw calls for complex gradients (like HSL waves), the engine quantizes dynamic colors into 32-step RGB buckets, grouping similar-shade pixels into a single Skia path builder. This cuts total GPU draw calls from hundreds to under ~15 with no visible quality loss on the pixelated LED board.</li>
+<li><strong>Direct static rendering:</strong> custom patterns bypass Reanimated UI-thread worklets and draw natively in Skia using static paths, achieving smooth 60 FPS playback on all iOS and Android devices.</li>
 <li><strong>"Off" vs "black":</strong> returning <code>false</code> turns the LED physically <strong>off</strong> (unpowered). Returning <code>{ on: true, color: "#000000" }</code> keeps it <strong>on</strong>, emitting black — it looks the same but stays powered in the data. Use <code>false</code> when you mean empty space.</li>
+<li><strong>Code editor tools:</strong> use the <strong>CLEAR</strong> button in the Code Lab modal to immediately wipe the text area and start fresh when editing code.</li>
 </ol>
 
-<div class="footer">Apex Creators · LED Banner Custom Pattern Creator</div>
+<div class="footer">
+  <span class="brand">LED Banner: Matrix &amp; Pixel Art</span> · Code Lab Guide<br>
+  Made by <a href="https://www.apexcreators.co.in/" target="_blank" rel="noopener">Apex Creators</a>
+</div>
 
 </div>
 
 <script>
-  // Build a small live-looking LED matrix strip as the page's signature element,
-  // echoing the "sweeping" pattern style described in the guide itself.
   const grid = document.getElementById('matrix');
   const cols = 48, rows = 6;
   for (let r = 0; r < rows; r++) {
