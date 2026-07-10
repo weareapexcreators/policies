@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED Banner — Pattern Coding Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #08090a;
+    --panel: #101211;
+    --line: #23261f;
+    --dot-off: #1c1e19;
+    --amber: #ffb300;
+    --amber-dim: #7a5a10;
+    --text: #d9d6c9;
+    --muted: #7c7c6f;
+    --danger: #ff4d3d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    background: var(--bg);
+  }
+  body {
+    margin: 0;
+    color: var(--text);
+    font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    padding-bottom: 70px;
+  }
+
+  /* ---------- signature: live LED matrix banner ---------- */
+  .board {
+    background: #000;
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0 22px;
+    overflow: hidden;
+  }
+  .board-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+  .matrix {
+    display: grid;
+    grid-template-columns: repeat(48, 1fr);
+    gap: 3px;
+    max-width: 620px;
+  }
+  .matrix span {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 1px;
+    background: var(--dot-off);
+  }
+  .matrix span.lit {
+    background: var(--amber);
+    box-shadow: 0 0 4px rgba(255,179,0,0.85), 0 0 1px rgba(255,179,0,1);
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  .board-label {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--amber);
+    letter-spacing: 0.35em;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.7rem;
+    letter-spacing: 0.06em;
+    color: #f2efe4;
+    margin: 40px 0 6px;
+  }
+  h1::before { content: "// "; color: var(--amber); }
+
+  .subtitle { color: var(--muted); margin: 0 0 8px; font-size: 0.92rem; }
+
+  h2 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-top: 52px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--line);
+  }
+  h3 {
+    font-size: 0.98rem;
+    color: #f2efe4;
+    margin-top: 30px;
+    border-left: 3px solid var(--amber-dim);
+    padding-left: 10px;
+  }
+
+  p { color: var(--text); }
+  ul, ol { padding-left: 20px; }
+  li { margin: 7px 0; }
+  li::marker { color: var(--amber-dim); }
+  strong { color: #fff; font-weight: 700; }
+  em { color: var(--muted); font-style: normal; }
+
+  .dotrule {
+    display: flex;
+    gap: 6px;
+    margin: 44px 0;
+  }
+  .dotrule span {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--dot-off);
+  }
+  .dotrule span:nth-child(3n) { background: var(--amber-dim); }
+
+  code {
+    background: rgba(255,179,0,0.08);
+    color: var(--amber);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 0.87em;
+  }
+  pre {
+    background: #000;
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--amber);
+    border-radius: 4px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 14px 0 26px;
+  }
+  pre code {
+    background: none;
+    color: #d9d6c9;
+    padding: 0;
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="board">
+  <div class="board-inner">
+    <div class="matrix" id="matrix"></div>
+    <div class="board-label">Grid Status — Rendering</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<h1>Pattern Coding Guide</h1>
+<p class="subtitle">LED Banner Custom Pattern Creator — Code Lab reference</p>
+
+<p>Welcome to the <strong>LED Banner Custom Pattern Creator</strong>.</p>
+<p>The Code Lab within the app allows you to programmatically generate complex static patterns and high-performance, multi-frame animations using pure JavaScript. This guide covers everything from basic syntax to advanced mathematical rendering techniques.</p>
+
+<div class="dotrule">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<h2>1. How the engine works (the pixel shader model)</h2>
+<p>Unlike traditional canvas drawing where you explicitly draw lines or circles, the LED Banner app uses a <strong>pixel shader model</strong>.</p>
+<p>When you click "RUN CODE", the engine evaluates your JavaScript function <strong>once for every single LED (pixel) on the grid</strong>, and it does this for <strong>every single frame</strong> of your animation.</p>
+<p>Your code is inside a loop that looks conceptually like this:</p>
+<pre><code>for (let f = 0; f &lt; requestedFrames; f++) {
+  for (let r = 0; r &lt; rows; r++) {
+    for (let c = 0; c &lt; cols; c++) {
+      // YOUR CODE RUNS HERE
+      // You must return what this specific LED should do.
+    }
+  }
+}
+</code></pre>
+
+<div class="dotrule">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<h2>2. API &amp; environment variables</h2>
+<p>Inside your code, you have immediate access to a rich set of environment variables and APIs to control the exact state of the LED grid.</p>
+
+<h3>Grid &amp; position variables</h3>
+<ul>
+<li><strong><code>r</code></strong> <em>(Number)</em> — the current row index (starts at <code>0</code>, goes down).</li>
+<li><strong><code>c</code></strong> <em>(Number)</em> — the current column index (starts at <code>0</code>, goes right).</li>
+<li><strong><code>rows</code></strong> <em>(Number)</em> — total number of rows in the grid.</li>
+<li><strong><code>cols</code></strong> <em>(Number)</em> — total number of columns in the grid.</li>
+</ul>
+
+<h3>Animation variables</h3>
+<ul>
+<li><strong><code>f</code></strong> <em>(Number)</em> — the current frame index being generated (defaults to <code>0</code> for a static pattern).</li>
+<li><strong><code>frames</code></strong> <em>(Number)</em> — the total number of frames requested by the animation.</li>
+</ul>
+
+<h3>The <code>api</code> object (animation controls)</h3>
+<p>By default, the engine evaluates a single static frame. If you want to generate a multi-frame animation, you must use the <code>api</code> object.</p>
+<ul>
+<li><strong><code>api.setFrames(number)</code></strong> — tells the engine how many frames to generate. Example: <code>api.setFrames(24);</code></li>
+<li><strong><code>api.setFps(number)</code></strong> — sets the playback speed in frames per second. Example: <code>api.setFps(15);</code></li>
+</ul>
+<p><em>Note: call these API functions at the very top of your code, outside of any <code>if</code> statements.</em></p>
+
+<div class="dotrule">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<h2>3. Output formats (return types)</h2>
+<p>Your code <strong>must</strong> <code>return</code> a value. This value dictates the state of the current LED at position <code>(r, c)</code> on frame <code>f</code>.</p>
+
+<h3>A. Boolean (simple on/off)</h3>
+<p>Return <code>true</code> to turn the LED <strong>ON</strong> (using the default color selected in the UI), or <code>false</code> to turn it <strong>OFF</strong>.</p>
+<pre><code>// Draws a diagonal line across the grid
+if (r === c) {
+  return true;
+}
+return false;
+</code></pre>
+
+<h3>B. Object (precise color control)</h3>
+<p>For advanced effects, return an object to define exact hex colors or valid CSS colors.</p>
+<pre><code>// Draws a checkerboard pattern with custom colors
+if ((r + c) % 2 === 0) {
+  return { on: true, color: "#FF00FF" }; // Neon Pink
+}
+return { on: true, color: "#00FFFF" };   // Cyan
+</code></pre>
+
+<div class="dotrule">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<h2>4. Professional recipes &amp; examples</h2>
+<p>Copy and paste these directly into the Code Lab to see them in action.</p>
+
+<h3>Example 1 — The sweeping rainbow (animated)</h3>
+<p>This creates a rainbow wave that shifts horizontally across the screen, using HSL colors for smooth hue transitions.</p>
+<pre><code>api.setFrames(30);
+api.setFps(20);
+
+// Calculate hue based on column position and the current frame
+let hue = ((c / cols) * 360) + ((f / frames) * 360);
+
+// Return an HSL string which the engine converts natively
+return { on: true, color: `hsl(${hue}, 100%, 50%)` };
+</code></pre>
+
+<h3>Example 2 — The expanding radar (animated)</h3>
+<p>This uses trigonometry (<code>Math.atan2</code>) to draw a sweeping radar scanner from the center of the screen.</p>
+<pre><code>api.setFrames(36);
+api.setFps(24);
+
+let centerR = rows / 2;
+let centerC = cols / 2;
+
+// Calculate angle of current pixel relative to the center
+let angle = Math.atan2(r - centerR, c - centerC);
+
+// Convert angle to a 0-1 scale
+let normalizedAngle = (angle + Math.PI) / (Math.PI * 2);
+
+// Calculate the radar's sweep angle for the current frame
+let sweep = f / frames;
+
+// If the pixel's angle is very close to the sweep angle, light it up green
+if (Math.abs(normalizedAngle - sweep) &lt; 0.05) {
+  return { on: true, color: "#00FF00" };
+}
+return false;
+</code></pre>
+
+<h3>Example 3 — Dropping matrix rain (animated)</h3>
+<p>Creates falling streaks of green light.</p>
+<pre><code>api.setFrames(15);
+api.setFps(10);
+
+// Generate a pseudo-random offset for each column
+// We use the column index to keep the offset consistent per column
+let offset = (c * 7) % frames;
+
+// Check if the current row matches the falling drop calculation
+let dropPos = (f + offset) % rows;
+
+if (r === dropPos) {
+  return { on: true, color: "#00FF00" }; // Bright head
+} else if (r === (dropPos - 1 + rows) % rows) {
+  return { on: true, color: "#005500" }; // Dim tail
+}
+
+return false;
+</code></pre>
+
+<h3>Example 4 — Bouncing DVD logo / ping pong (animated)</h3>
+<p>A solid block that bounces around the edges of the grid.</p>
+<pre><code>api.setFrames(60);
+api.setFps(30);
+
+// Calculate X and Y bouncing using a triangle wave (absolute sine representation)
+// Math.abs( (frame % (length * 2)) - length ) gives a perfect ping-pong bounce
+let xCycle = cols - 1;
+let yCycle = rows - 1;
+
+let currentC = Math.abs((f % (xCycle * 2)) - xCycle);
+let currentR = Math.abs(((f * 1.5) % (yCycle * 2)) - yCycle); // 1.5x speed on Y axis
+
+// Draw a 2x2 block
+if (Math.abs(r - currentR) &lt;= 1 &amp;&amp; Math.abs(c - currentC) &lt;= 1) {
+  return { on: true, color: "#FFDD00" };
+}
+
+return false;
+</code></pre>
+
+<div class="dotrule">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<h2>5. Edge cases &amp; best practices</h2>
+<ol>
+<li><strong>Performance limit:</strong> your code executes <code>rows × cols × frames</code> times. For a 32×64 grid with 30 frames, that's over <code>60,000</code> runs per generation. Use efficient math and avoid heavy <code>while</code> loops inside the renderer.</li>
+<li><strong>Dynamic colors:</strong> use HEX (<code>#FF0000</code>), RGB (<code>rgb(255,0,0)</code>), or HSL (<code>hsl(0, 100%, 50%)</code>). HSL is recommended for smooth animations.</li>
+<li><strong>Invalid returns:</strong> if your code crashes or returns an invalid structure, the app's error boundary safely catches it and prompts you to fix your syntax.</li>
+<li><strong>"Off" vs "black":</strong> returning <code>false</code> turns the LED physically <strong>off</strong> (unpowered). Returning <code>{ on: true, color: "#000000" }</code> keeps it <strong>on</strong>, emitting black — it looks the same but stays powered in the data. Use <code>false</code> when you mean empty space.</li>
+</ol>
+
+<div class="footer">Apex Creators · LED Banner Custom Pattern Creator</div>
+
+</div>
+
+<script>
+  // Build a small live-looking LED matrix strip as the page's signature element,
+  // echoing the "sweeping" pattern style described in the guide itself.
+  const grid = document.getElementById('matrix');
+  const cols = 48, rows = 6;
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const dot = document.createElement('span');
+      const wave = Math.sin((c / cols) * Math.PI * 4 + r * 0.6);
+      if (wave > 0.55) {
+        dot.classList.add('lit');
+        dot.style.animationDelay = (c * 0.03) + 's';
+      }
+      grid.appendChild(dot);
+    }
+  }
+</script>
+
+</body>
+</html>
