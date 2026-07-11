@@ -210,6 +210,66 @@
 </ul>
 <p><em>Note: call these API functions at the very top of your code, outside of any <code>if</code> statements.</em></p>
 
+<h3>Math, noise &amp; time helpers</h3>
+<ul>
+<li><strong><code>api.time()</code></strong> — returns elapsed time based on current frame and FPS (<code>f / fps</code>).</li>
+<li><strong><code>api.noise(x, y, seed)</code></strong> — returns seeded 2D procedural noise (value between 0 and 1).</li>
+<li><strong><code>api.fbm(x, y, octaves, seed)</code></strong> — Fractional Brownian Motion. Combines multiple octaves of noise for organic textures (clouds, fire, terrain).</li>
+<li><strong><code>api.random(seed)</code></strong> — returns a reproducible random number between 0 and 1.</li>
+<li><strong><code>api.hash(x, y)</code></strong> — quick stateless 2D hash function for static noise.</li>
+<li><strong><code>api.wrap(value, max)</code></strong> — safely wraps a value around a maximum (perfect for seamless screen looping).</li>
+<li><strong><code>api.clamp(value, min, max)</code></strong> — bounds a value between min and max.</li>
+<li><strong><code>api.pingpong(value, length)</code></strong> — creates a triangle wave that bounces back and forth.</li>
+<li><strong><code>api.map(value, inMin, inMax, outMin, outMax)</code></strong> — maps a value from one range to another.</li>
+</ul>
+
+<h3>Color &amp; utility helpers</h3>
+<ul>
+<li><strong><code>api.hsv(h, s, v)</code></strong> — returns a valid Hex color from HSV values (0.0 to 1.0).</li>
+<li><strong><code>api.lerpColor(c1, c2, t)</code></strong> — linearly interpolates between two colors based on <code>t</code>.</li>
+<li><strong><code>api.palette(name, t)</code></strong> — samples a built-in color palette based on <code>t</code> (0.0 to 1.0). Built-in palettes: <code>"fire"</code>, <code>"ice"</code>, <code>"rainbow"</code>, <code>"matrix"</code>.</li>
+<li><strong><code>api.paletteCycle(name, speed)</code></strong> — automatically samples a palette over time. Great for scrolling rainbow backgrounds!</li>
+<li><strong><code>api.dither(value)</code></strong> — a classic Bayer matrix dither. Returns a boolean on/off state to simulate grayscale values using only binary LEDs!</li>
+</ul>
+
+<h3>Pixel, sprite &amp; text engines</h3>
+<ul>
+<li><strong><code>api.pixel(source, x, y)</code></strong> — reads a pixel from a constant 2D sprite array or the base frame.</li>
+<li><strong><code>api.prev(x, y, framesAgo)</code></strong> — reads the pixel state from <strong>previous frames</strong>. Pass <code>framesAgo</code> (e.g. <code>api.prev(x, y, 5)</code>) to read 5 frames into the past!</li>
+<li><strong><code>api.neighbor(dx, dy)</code></strong> / <strong><code>api.read(x, y)</code></strong> — reads a neighboring pixel from the current frame buffer (only works for pixels above/left that have already evaluated).</li>
+<li><strong><code>api.sprite(name)</code></strong> — returns a built-in classic sprite (2D array). <em>Available sprites:</em> <code>"pacman"</code>, <code>"pacman_open"</code>, <code>"pacman_closed"</code>, <code>"ghost"</code>, <code>"ghost_a"</code>, <code>"ghost_b"</code>, <code>"invader"</code>, <code>"invader_a"</code>, <code>"invader_b"</code>, <code>"coin"</code>, <code>"coin_face"</code>, <code>"coin_edge"</code>.</li>
+<li><strong><code>api.char(char, x, y)</code></strong> — returns the boolean state of a pixel for a tiny built-in 3x5 font character (A-Z, 0-9).</li>
+</ul>
+
+<p><strong>👾 Using <code>api.pixel()</code> with Custom Sprites</strong><br>
+The <code>source</code> must be an <strong>Array of Arrays</strong> (e.g. <code>[[0,1,0], [1,1,1]]</code>). It <strong>cannot</strong> be an Array of Strings (e.g. <code>["010"]</code>) because non-empty strings evaluate to <code>true</code> in JS. <code>api.pixel</code> automatically returns <code>false</code> if <code>x</code> or <code>y</code> are outside the bounds of the array!</p>
+<pre><code>const PACMAN = [
+  [0,1,1,1,0],
+  [1,1,1,1,1],
+  [1,1,0,0,0],
+  [1,1,1,1,1],
+  [0,1,1,1,0]
+];
+
+// Note: You CAN define constants at the top of your code!
+if (api.pixel(PACMAN, c - 5, r - 5)) {
+  return { on: true, color: "#FFFF00" };
+}
+return false;
+</code></pre>
+
+<h3>Performance hooks</h3>
+<ul>
+<li><strong><code>api.oncePerFrame(callback)</code></strong> — since your code executes <em>thousands</em> of times per frame, expensive math (like calculating bouncing paths) can freeze the app. <code>oncePerFrame</code> guarantees the callback only runs <strong>once</strong> at the start of the frame, letting you save variables to a shared state object!</li>
+</ul>
+<pre><code>// Calculate positions ONCE per frame!
+let state = api.oncePerFrame((s) =&gt; {
+    s.x = Math.sin(api.time()) * 10;
+});
+// Access the pre-calculated value extremely fast for all pixels!
+if (c === Math.floor(state.x)) return true;
+</code></pre>
+
 <div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 
 <h2>3. Output formats (return types)</h2>
@@ -328,6 +388,100 @@ return {
   on: active,
   color: `hsl(180, 100%, ${lightness}%)` // Bright neon cyan
 };
+</code></pre>
+
+<h3>Example 5 — Pac-Man chase (sprites &amp; oncePerFrame)</h3>
+<p>Showcases the power of built-in animated sprites and performance hooks to create a classic retro chase scene!</p>
+<pre><code>api.setFrames(180);
+api.setFps(15);
+api.setLoop(true);
+
+let state = api.oncePerFrame(s =&gt; {
+    s.pacX = api.wrap(f, cols + 20) - 8;
+    s.ghostX = s.pacX - 10;
+    s.y = Math.floor(rows / 2) - 3;
+    // Toggle mouth every 5 frames
+    s.pacFrame = (Math.floor(f / 5) % 2 === 0) ? "pacman_open" : "pacman_closed";
+});
+
+let py = r - state.y;
+
+// Draw Pac-Man
+if (api.pixel(api.sprite(state.pacFrame), c - state.pacX, py)) {
+    return { on: true, color: "#FFD800" };
+}
+
+// Draw Ghost
+if (api.pixel(api.sprite("ghost_a"), c - state.ghostX, py)) {
+    return { on: true, color: "#FF4444" };
+}
+
+// Draw eating dots
+if (r == Math.floor(rows/2)) {
+    if (c &gt; state.pacX + 6 &amp;&amp; c % 4 == 0) return { on: true, color: "#FFFFFF" };
+}
+
+return false;
+</code></pre>
+
+<h3>Example 6 — Space Invaders march (pingpong)</h3>
+<p>A group of aliens bouncing side to side in unison.</p>
+<pre><code>api.setFrames(120);
+api.setFps(12);
+api.setLoop(true);
+
+let s = api.oncePerFrame(state =&gt; {
+    state.offset = api.pingpong(f * 0.5, cols - 26);
+    state.anim = (Math.floor(f / 8) % 2 === 0) ? "invader_a" : "invader_b";
+});
+
+for (let i = 0; i &lt; 3; i++) {
+    let x = s.offset + (i * 9); // Space out invaders
+    let y = 1;
+
+    if (api.pixel(api.sprite(s.anim), c - x, r - y)) {
+        return { on: true, color: "#33FF66" };
+    }
+}
+
+return false;
+</code></pre>
+
+<h3>Example 7 — "GOAL!" celebration (text &amp; particles)</h3>
+<p>Spells "GOAL" using the built-in tiny font and creates falling confetti!</p>
+<pre><code>api.setFrames(90);
+api.setFps(20);
+api.setLoop(true);
+
+let t = api.time();
+
+// Calculate flashing background
+let bgFlash = Math.sin(t * 15) &gt; 0.5;
+
+// Draw GOAL text exactly in the center
+let startC = Math.floor(cols / 2) - 8;
+let rY = Math.floor(rows / 2) - 3;
+
+let textOn = api.char('G', c - startC, r - rY) || 
+             api.char('O', c - startC - 4, r - rY) ||
+             api.char('A', c - startC - 8, r - rY) ||
+             api.char('L', c - startC - 12, r - rY);
+
+if (textOn) return { on: true, color: "#FFFFFF" };
+
+// Confetti logic: 5% of pixels are confetti that falls down over time
+let seed = api.hash(c, r);
+let fallY = (r - Math.floor(t * 15 * (seed + 0.5))) % rows;
+if (fallY &lt; 0) fallY += rows;
+
+if (seed &gt; 0.95 &amp;&amp; Math.abs(r - fallY) &lt; 1) {
+    return { on: true, color: api.palette("rainbow", seed * 10) };
+}
+
+// Background strobe
+if (bgFlash &amp;&amp; (r % 2 === c % 2)) return { on: true, color: "#110000" };
+
+return false;
 </code></pre>
 
 <div class="dotrule"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
