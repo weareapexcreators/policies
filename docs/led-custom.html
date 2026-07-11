@@ -448,28 +448,66 @@ return false;
 </code></pre>
 
 <h3>Example 7 — "GOAL!" celebration (text &amp; particles)</h3>
-<p>Spells "GOAL" using the built-in tiny font and creates falling confetti!</p>
+<p>Spells "GOAL" using custom <strong>5×7 letter sprites</strong> via <code>api.pixel()</code> for readable text, plus falling confetti!</p>
+<p><em>Note: <code>api.char()</code> uses a tiny 3×5 font — great for small labels, but for big readable text like this, define your own letter arrays.</em></p>
 <pre><code>api.setFrames(90);
 api.setFps(20);
 api.setLoop(true);
 
-let t = api.time();
+// 5x7 letter sprites (readable size)
+const G = [
+  [0,1,1,1,0],
+  [1,0,0,0,0],
+  [1,0,0,0,0],
+  [1,0,0,1,1],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [0,1,1,1,0]
+];
+const O = [
+  [0,1,1,1,0],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [0,1,1,1,0]
+];
+const A = [
+  [0,1,1,1,0],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [1,1,1,1,1],
+  [1,0,0,0,1],
+  [1,0,0,0,1],
+  [1,0,0,0,1]
+];
+const L = [
+  [1,0,0,0,0],
+  [1,0,0,0,0],
+  [1,0,0,0,0],
+  [1,0,0,0,0],
+  [1,0,0,0,0],
+  [1,0,0,0,0],
+  [1,1,1,1,1]
+];
 
-// Calculate flashing background
+let t = api.time();
 let bgFlash = Math.sin(t * 15) &gt; 0.5;
 
-// Draw GOAL text exactly in the center
-let startC = Math.floor(cols / 2) - 8;
-let rY = Math.floor(rows / 2) - 3;
+// Center the word: 4 letters × 5 wide + 3 gaps = 23 cols total
+let startC = Math.floor(cols / 2) - 11;
+let startR = Math.floor(rows / 2) - 3;
 
-let textOn = api.char('G', c - startC, r - rY) || 
-             api.char('O', c - startC - 4, r - rY) ||
-             api.char('A', c - startC - 8, r - rY) ||
-             api.char('L', c - startC - 12, r - rY);
+// Check each letter (5 wide + 1 gap = 6 per letter)
+let textOn = api.pixel(G, c - startC, r - startR) ||
+             api.pixel(O, c - startC - 6, r - startR) ||
+             api.pixel(A, c - startC - 12, r - startR) ||
+             api.pixel(L, c - startC - 18, r - startR);
 
 if (textOn) return { on: true, color: "#FFFFFF" };
 
-// Confetti logic: 5% of pixels are confetti that falls down over time
+// Confetti: 5% of pixels fall as rainbow particles
 let seed = api.hash(c, r);
 let fallY = (r - Math.floor(t * 15 * (seed + 0.5))) % rows;
 if (fallY &lt; 0) fallY += rows;
