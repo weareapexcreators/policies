@@ -1,4 +1,4 @@
-Privacy Policy for LocalAI – Offline AI Chat LLM
+Privacy Policy for LocalAI: Offline AI Chat LLM
 
 Effective Date: June 14, 2026
 
@@ -6,7 +6,7 @@ Effective Date: June 14, 2026
 
 1. Introduction
 
-Welcome to LocalAI – Offline AI Chat LLM ("the App"), developed and maintained
+Welcome to LocalAI: Offline AI Chat LLM ("the App"), developed and maintained
 by Apex Creators ("we," "our," or "us"). We are committed to protecting your
 privacy and ensuring you have complete control over your data. Because LocalAI
 is designed as an offline inference engine, our privacy practices are
