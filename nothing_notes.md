@@ -1,4 +1,4 @@
-# Privacy Policy for Nothing Notes
+# Privacy Policy for Apex Notes
 
 **Last Updated:** June 14, 2026
 
@@ -6,7 +6,7 @@
 
 ## 1. Introduction
 
-Welcome to **Nothing Notes** (the "App"), developed by **Apex Creators** ("we," "our," or "us").
+Welcome to **Apex Notes** (the "App"), developed by **Apex Creators** ("we," "our," or "us").
 
 Your privacy is important to us. This Privacy Policy explains how information is handled when you use our App published on the Google Play Store.
 
@@ -16,7 +16,7 @@ Your privacy is important to us. This Privacy Policy explains how information is
 
 ### Data Stored Locally on Your Device
 
-Nothing Notes stores all notes and app data **locally on your device only**, including:
+Apex Notes stores all notes and app data **locally on your device only**, including:
 
 - Notes and text content you create
 - App preferences and settings
@@ -109,7 +109,7 @@ All note content and user data remain stored locally on your device.
 
 ## 8. Children's Privacy
 
-Nothing Notes complies with the Children's Online Privacy Protection Act (COPPA) and Google Play policies.
+Apex Notes complies with the Children's Online Privacy Protection Act (COPPA) and Google Play policies.
 
 - The App does not knowingly collect personal information from children under 13
 - We do not knowingly serve personalized ads to children under 13
