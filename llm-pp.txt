@@ -1,6 +1,6 @@
 Privacy Policy for LocalAI: Offline AI Chat LLM
 
-Effective Date: June 14, 2026
+Effective Date: July 30, 2026
 
 ================================================================================
 
@@ -8,255 +8,148 @@ Effective Date: June 14, 2026
 
 Welcome to LocalAI: Offline AI Chat LLM ("the App"), developed and maintained
 by Apex Creators ("we," "our," or "us"). We are committed to protecting your
-privacy and ensuring you have complete control over your data. Because LocalAI
-is designed as an offline inference engine, our privacy practices are
-exceptionally straightforward: what happens on your device stays on your device.
+privacy and ensuring you have complete control over your data.
 
-This Privacy Policy explains how we handle data when you use the App. By using
-the App, you agree to the practices described in this policy.
+LocalAI is built from the ground up as a 100% ad-free, privacy-first, on-device
+artificial intelligence engine. All inference, document parsing, chat history,
+and voice processing occur locally on your hardware. We do NOT serve ads, do
+NOT sell your data, do NOT run tracking scripts, and do NOT maintain cloud servers
+to collect your conversations.
 
-================================================================================
-
-2. Information We Do Not Collect
-
-We believe that privacy is a fundamental right, especially when interacting with
-Artificial Intelligence. To that end, LocalAI is built with a strict
-"No Telemetry, No Tracking" architecture:
-
-- No Account Required: We do not require you to create an account, provide an
-  email address, or share any personal identity information to use the App.
-
-- No Chat Logs Collection: Your conversation history, prompts, and AI-generated
-  responses are stored exclusively in a local SQLite database on your device.
-  We NEVER transmit, collect, or monitor your chat data.
-
-- No Document or Image Uploads: When you use the App's vision or
-  document-parsing features, the files and photos you attach are processed
-  locally by the AI model entirely on your hardware. We do not upload your
-  files to any cloud server.
-
-- No Conversation or File Telemetry: By default (when using local models), we
-  NEVER collect, monitor, or upload your conversation history, prompts, AI
-  responses, images, or documents. All AI processing is strictly offline and
-  local to your device. If you explicitly choose to use a Cloud Provider (BYOK),
-  your data is handled according to that provider's policies (see Section 5).
+This Privacy Policy outlines our data handling practices in compliance with
+the Google Play Store Developer Policies, Apple App Store Review Guidelines,
+General Data Protection Regulation (GDPR), California Consumer Privacy Act
+(CCPA / CPRA), and Children's Online Privacy Protection Act (COPPA) as of July 2026.
 
 ================================================================================
 
-3. Analytics and Crashlytics
+2. Data Collection and Usage Practices
 
-To improve the stability, speed, and performance of the App, we utilize Google
-Firebase Analytics and Crashlytics:
+2.1 Zero Personal Data Collection
+We do not require account registration, email addresses, phone numbers, or any
+personal identity information to use the App.
 
-- Anonymized Usage Metrics: We log anonymized usage events (such as model
-  download starts, download speeds, model load times, and token inference
-  speeds) to optimize our on-device memory management guards.
+2.2 100% On-Device Local Chat & Files
+- Chat Conversations: Your conversation history, prompts, system instructions,
+  and AI responses are stored exclusively in an encrypted, local SQLite database
+  on your device. We NEVER collect, transmit, or monitor your chat logs.
+- Document & Image Attachments: When you use document parsing (PDFs, DOCX, XLSX,
+  CSV, TXT) or in-app vision features, all files and camera captures are processed
+  entirely on your device hardware by on-device LLM models. Files are never uploaded
+  to our or any third-party servers.
+- Voice & Speech Processing: Text-to-Speech (TTS) and Speech-to-Text (STT) run
+  locally using your device's native engines. Audio is processed on-device and
+  is never recorded or transmitted remotely by us.
 
-- Anonymized Crash Reports: In the event of a crash, anonymized logs and stack
-  traces are transmitted to help us detect and debug system crashes.
-
-- Complete Privacy: No personal identification details, account data, location
-  data, or text/image prompts are ever collected or sent to Firebase.
-
-================================================================================
-
-4. Advertising – Google AdMob
-
-The App displays advertisements served by Google AdMob, a mobile advertising
-platform operated by Google LLC. By integrating AdMob, we are required by
-Google's Publisher Policies to clearly disclose how AdMob collects and uses
-data when ads are displayed to you.
-
-------------------------------------------------------------
-4.1 Data Collected Automatically by the Google Mobile Ads SDK
-------------------------------------------------------------
-
-The Google Mobile Ads SDK (GMA SDK) automatically collects and shares the
-following data for the purposes of advertising, analytics, and fraud prevention:
-
-- IP Address:
-  Your device's IP address, which may be used to estimate your general
-  geographic location.
-
-- User Interactions:
-  Information about how you interact with the app, including app launches, taps,
-  and video views. Performance data such as app launch time, hang rate, or
-  energy usage may also be collected to evaluate user behavior and improve
-  product features. This data may be used for displaying ads, including sharing
-  with other entities that display ads.
-
-- Device Identifiers:
-  Your device's advertising identifier (Android Advertising ID / IDFA on iOS)
-  or other app- or developer-bounded device identifiers, which may be used for
-  third-party advertising and analytics.
-
-- Diagnostic Information:
-  Non-user-related crash logs and SDK performance data used to diagnose problems
-  and improve the SDK. This information may also be used for advertising and
-  analytics purposes.
-
-All data collected by the Google Mobile Ads SDK is encrypted in transit using
-TLS (Transport Layer Security).
-
-------------------------------------------------------------
-4.2 Personalized vs. Non-Personalized Ads
-------------------------------------------------------------
-
-AdMob may serve personalized (interest-based) ads using your advertising ID and
-inferred demographic categories. You may opt out of personalized advertising at
-any time through your device settings:
-
-- Android: Settings > Google > Ads > "Delete advertising ID"
-           or "Opt out of Ads Personalization"
-- iOS:     Settings > Privacy > Tracking > disable "Allow Apps to Request to
-           Track", and Settings > Privacy > Apple Advertising > disable
-           "Personalized Ads"
-
-------------------------------------------------------------
-4.3 Advertising ID Controls
-------------------------------------------------------------
-
-Users may reset or delete their Advertising ID at any time through their
-device's ad settings. On Android 13 and above, you can delete the advertising
-ID entirely, after which it will be replaced with a string of zeros and no
-personalized ads will be served.
-
-------------------------------------------------------------
-4.4 EU / EEA, UK & Switzerland Users – GDPR Consent
-------------------------------------------------------------
-
-Under the Google EU User Consent Policy, if you are located in the European
-Economic Area (EEA), the United Kingdom (UK), or Switzerland, the App will
-display a consent dialog before serving personalized ads. This is required under
-the EU ePrivacy Directive and the General Data Protection Regulation (GDPR).
-You may withdraw your consent at any time through the App's settings or your
-device's ad controls.
-
-------------------------------------------------------------
-4.5 US State Privacy Laws
-------------------------------------------------------------
-
-For users in US states with applicable privacy laws (including but not limited
-to California CPRA, Virginia VCDPA, Colorado CPA, and others), Google AdMob
-supports Restricted Data Processing (RDP) and the Global Privacy Platform (GPP)
-signal. Where required by law, we will limit data processing and honor opt-out
-requests for the sale or sharing of personal data for targeted advertising.
-
-------------------------------------------------------------
-4.6 Children and AdMob
-------------------------------------------------------------
-
-We do not knowingly serve personalized ads to children under the age of 13 (or
-under the applicable age of digital consent in your region). Where required, we
-apply Google's child-directed treatment tags (TFCD / TFUA) to ensure that the
-advertising ID and other identifiers are not transmitted for child-directed ad
-requests. See also Section 8 (Children's Privacy).
-
-------------------------------------------------------------
-4.7 Google's Privacy Policy & AdMob Resources
-------------------------------------------------------------
-
-The data collected via AdMob is governed by Google's own Privacy Policy.
-For full details on how Google collects and uses this data, please visit:
-
-  Google Privacy Policy:   https://policies.google.com/privacy
-  AdMob Help Center:       https://support.google.com/admob/answer/6128543
-  How Google uses data:    https://policies.google.com/technologies/partner-sites
+2.3 Complete Absence of Advertisements and Tracking
+The App is 100% AD-FREE. We do not use Google AdMob, Unity Ads, Meta Audience
+Network, or any other third-party advertising SDKs.
+- No Advertising Identifiers: We do not access, collect, or store device Advertising
+  IDs (Android Advertising ID / Apple IDFA).
+- No App Tracking: The App does not track you across third-party websites or apps.
+  Under Apple's App Tracking Transparency (ATT) framework and Google's Play Data
+  Safety guidelines, LocalAI collects zero tracking data.
 
 ================================================================================
 
-5. External Network Connections
+3. Optional External Network Connections
 
-While LocalAI is primarily an offline application, it does require a temporary
-internet connection for:
+LocalAI operates completely offline once models are downloaded. Internet access
+is used strictly for the following optional features:
 
-- The Model Hub: Discovering and downloading open-source Large Language Models
-  (LLMs) like LLaMA, DeepSeek, Qwen, and others via Hugging Face
-  (huggingface.co).
+3.1 Open-Source Model Downloads (Hugging Face)
+When you browse or download open-source GGUF AI models in the Models Hub, your
+device connects directly via HTTPS to Hugging Face (huggingface.co). Standard
+HTTP routing data (such as your IP address) is handled by Hugging Face according
+to their privacy policy. We do not track or log which models you download.
 
-- Data Exchanged during Downloads: When downloading models, your device
-  communicates standard network routing data (such as your IP address) directly
-  to Hugging Face. We do not track which models you download.
-
-- Ad Serving: When advertisements are displayed, the Google Mobile Ads SDK
-  communicates with Google's ad servers as described in Section 4 above.
-
-- Cloud Providers (BYOK): If you choose to enable "Cloud Providers" and supply
-  your own API key (e.g., OpenAI, Anthropic, OpenRouter), your chat prompts,
-  conversation history, and attached images/documents for that session will be
-  transmitted directly to the respective third-party provider's API for processing.
-  We do not proxy or intercept this data. Your API keys are stored securely
-  on your device's encrypted keystore and are never transmitted to us. Please
-  review the privacy policy of the specific cloud provider you choose to use.
-
-Once a local model is downloaded to your device and you are not using a Cloud
-Provider, all AI inference requires absolutely no internet connection.
+3.2 Optional Cloud Providers (Bring Your Own Key - BYOK)
+If you explicitly choose to configure third-party Cloud Providers (such as OpenAI,
+Anthropic, or OpenRouter) in Settings:
+- Your API keys are encrypted and stored solely on your device (using Android Keystore
+  / Secure Storage).
+- Session prompts and messages are sent directly from your device to the selected
+  provider's official API endpoint.
+- We do not proxy, inspect, intercept, or store any data sent to cloud providers.
+- Data sent to third-party providers is governed by that specific provider's privacy policy.
 
 ================================================================================
 
-6. Local Device Permissions
+4. Local Device Permissions
 
-To function properly, LocalAI may request the following device permissions.
-All data accessed via these permissions remains strictly on your device, except
-where used by Google AdMob as described in Section 4:
+LocalAI requests only essential device permissions to enable local features. All
+data accessed through these permissions remains on your device:
 
-- Storage / Files Permission: Required to save downloaded AI models (.gguf
-  files), to read documents (PDFs, Word docs, etc.) that you explicitly attach
-  to a chat, and to store your chat history locally.
-
-- Camera / Photos Permission: Required only if you choose to take a photo or
-  attach an image from your gallery to chat with a Vision-capable AI model.
-
-================================================================================
-
-7. Third-Party Links and Services
-
-Our App may contain links to third-party websites (such as the Hugging Face
-website or open-source project repositories). We are not responsible for the
-privacy practices or content of these external sites.
-
-Additionally, Google AdMob is a third-party advertising service integrated into
-the App. AdMob operates under Google's own terms of service and privacy policies,
-which are independent of this Privacy Policy. We encourage you to review
-Google's Privacy Policy at https://policies.google.com/privacy.
+- Storage / Media Permission: Used to save downloaded GGUF AI models locally, to
+  read documents attached by you, and to store local chat database backups.
+- Camera Permission: Used strictly if you choose to capture a photo using the
+  in-app camera to process image inputs with on-device vision models.
+- Microphone Permission: Used strictly if you enable voice mode for hands-free local
+  speech recognition.
 
 ================================================================================
 
-8. Children's Privacy
+5. Third-Party Links & Resources
 
-The App is not intended for use by children under the age of 13. We do not
-knowingly collect, maintain, or use personal information from children under 13,
-as we do not collect personal information from anyone.
+The App may contain links to external websites (such as open-source project repositories,
+community social links, or Hugging Face model pages). We are not responsible for
+the privacy practices or content of third-party websites. We encourage you to review
+the privacy policies of any external services you visit.
 
-Furthermore, because the App can download and interact with open-source Large
-Language Models (LLMs) that may generate unpredictable content, we strongly
-advise that individuals under the age of 18 use the App only under parental
-supervision.
+================================================================================
 
-Regarding advertising: we do not knowingly serve personalized ads to children.
-If you are a parent or guardian and believe your child has been exposed to
-personalized advertising through this App or has provided personal data,
-please contact us immediately at the address in Section 10.
+6. Children's Privacy (COPPA & Global Standards)
+
+LocalAI does not knowingly collect or solicit personal information from children
+under the age of 13 (or 16 in the EEA). Because all processing is local and no
+personal data is gathered, no children's data is stored or shared.
+
+Because AI models generate responses dynamically based on user prompts, we advise
+that minors under 18 use the App under parental or legal guardian supervision.
+
+================================================================================
+
+7. User Rights & Data Control (GDPR / CCPA / Global Laws)
+
+Under global privacy regulations (including GDPR, CCPA, CPRA, LGPD, and PIPEDA):
+- Right to Access & Export: You can view, copy, or export your full chat history
+  at any time directly within the App.
+- Right to Erasure / Deletion: You can clear individual chat sessions, delete stored
+  models, or clear all application data at any time from the App Settings or via
+  Android/iOS System Settings. Since all data resides locally on your device, clearing
+  app storage permanently and irreversibly deletes all your data.
+- Do Not Sell or Share Personal Information: We do not sell, rent, or share personal
+  information with third parties under any circumstances.
+
+================================================================================
+
+8. Security
+
+Your privacy and security are safeguarded by our local-first architecture:
+- No central database or cloud storage of chat logs to breach.
+- API keys for cloud providers are stored in hardware-backed secure storage on device.
+- All network communications for model downloads or optional cloud APIs are encrypted
+  using industry-standard TLS (HTTPS).
 
 ================================================================================
 
 9. Changes to This Privacy Policy
 
-We may update this Privacy Policy from time to time. Any changes will be
-reflected by an updated "Effective Date" at the top of this document. Since we
-do not collect contact information, we cannot notify users directly of changes;
-we encourage you to review this policy periodically in the app store or via our
-website.
+We may update this Privacy Policy to reflect future software enhancements or legal
+requirements. Updates will be indicated by the "Effective Date" at the top of this
+document. As we do not collect user contact information, updates will be published
+within the App and on our official website.
 
 ================================================================================
 
 10. Contact Us
 
-If you have any questions or concerns about this Privacy Policy or our data
-practices, please contact us at:
+If you have any questions or feedback regarding this Privacy Policy or our privacy
+practices, please contact us:
 
   Apex Creators
   Email:   info@apexcreators.co.in
   Website: https://www.apexcreators.co.in
+  Policy:  https://weareapexcreators.github.io/policies/llm-pp.txt
 
 ================================================================================
