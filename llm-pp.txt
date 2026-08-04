@@ -6,9 +6,10 @@ Effective Date: July 30, 2026
 
 1. Introduction
 
-Welcome to LocalAI: Offline AI Chat LLM ("the App"), developed and maintained
-by Apex Creators ("we," "our," or "us"). We are committed to protecting your
-privacy and ensuring you have complete control over your data.
+Welcome to LocalAI: Offline AI Chat LLM ("the App"). The App is developed
+and operated by Abhinav Kumar, operating as Apex Creators ("we," "our," or
+"us"). We are committed to protecting your privacy and ensuring you have
+complete control over your data.
 
 LocalAI is built from the ground up as a 100% ad-free, privacy-first, on-device
 artificial intelligence engine. All inference, document parsing, chat history,
@@ -147,7 +148,7 @@ within the App and on our official website.
 If you have any questions or feedback regarding this Privacy Policy or our privacy
 practices, please contact us:
 
-  Apex Creators
+  Abhinav Kumar, operating as Apex Creators
   Email:   info@apexcreators.co.in
   Website: https://www.apexcreators.co.in
   Policy:  https://weareapexcreators.github.io/policies/llm-pp.txt
