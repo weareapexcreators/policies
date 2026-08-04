@@ -7,7 +7,8 @@ Effective Date: July 30, 2026
 1. Acceptance of Terms
 
 By downloading, installing, accessing, or using LocalAI: Offline AI Chat LLM
-("the App"), provided by Apex Creators ("we," "our," or "us"), you agree to be
+("the App"), provided by Abhinav Kumar, operating as Apex Creators ("we,"
+"our," or "us"), you agree to be
 bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms,
 do not download or use the App.
 
@@ -117,7 +118,7 @@ These Terms shall be governed by and construed in accordance with applicable law
 
 For questions or official notices regarding these Terms, please contact:
 
-  Apex Creators
+  Abhinav Kumar, operating as Apex Creators
   Email:   info@apexcreators.co.in
   Website: https://www.apexcreators.co.in
 
