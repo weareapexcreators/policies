@@ -112,7 +112,17 @@ USE OF THE APP.
 
 ================================================================================
 
-10. Governing Law & Contact Information
+10. In-App Purchases & Auto-Renewable Subscriptions
+
+- Subscription Plans: LocalAI offers an optional auto-renewable monthly subscription ("Supporter").
+- Auto-Renewal & Billing: Payment will be charged to your Apple ID account at confirmation of purchase.
+  Subscriptions automatically renew every month unless auto-renewal is turned off or cancelled at least 24 hours before the end of the current billing period.
+- Cancellation & Management: You can manage, change, or turn off auto-renewal for your subscription at any time in your Apple ID Account Settings (Settings -> Subscriptions).
+- Refunds: All billing and refunds are handled directly by Apple in accordance with Apple Media Services Terms and Conditions.
+
+================================================================================
+
+11. Governing Law & Contact Information
 
 These Terms shall be governed by and construed in accordance with applicable laws.
 
@@ -121,5 +131,6 @@ For questions or official notices regarding these Terms, please contact:
   Abhinav Kumar, operating as Apex Creators
   Email:   info@apexcreators.co.in
   Website: https://www.apexcreators.co.in
+  Terms:   https://weareapexcreators.github.io/policies/localaitnc.txt
 
 ================================================================================
