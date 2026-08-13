@@ -3,27 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Mini Weather</title>
+    <title>Privacy Policy | Mini Weather: Cold Or Warm</title>
     <style>
         :root {
-            --bg-color: #000000;
-            --surface-color: #111111;
-            --text-primary: #ffffff;
-            --text-secondary: #888888;
-            --border-color: #222222;
-            --accent-color: #e50914;
+            --bg-color: #ffffff;
+            --surface-color: #f7f7f8;
+            --text-primary: #111111;
+            --text-secondary: #444444;
+            --border-color: #e5e5e7;
+            --accent-color: #000000;
             --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg-color: #ffffff;
-                --surface-color: #f7f7f7;
-                --text-primary: #111111;
-                --text-secondary: #666666;
-                --border-color: #e5e5e5;
-                --accent-color: #d32f2f;
-            }
         }
 
         * {
@@ -36,19 +25,19 @@
             font-family: var(--font-family);
             background-color: var(--bg-color);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.65;
             font-size: 15px;
             padding: 40px 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
         }
 
         header {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -57,6 +46,7 @@
             font-weight: 700;
             letter-spacing: -0.5px;
             margin-bottom: 8px;
+            color: var(--text-primary);
         }
 
         .meta {
@@ -64,23 +54,69 @@
             font-size: 14px;
         }
 
-        section {
+        .notice-box {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .toc {
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px 24px;
             margin-bottom: 36px;
+        }
+
+        .toc h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .toc ol {
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+        }
+
+        .toc a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 40px;
         }
 
         h2 {
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             color: var(--text-primary);
-            letter-spacing: -0.2px;
+            letter-spacing: -0.3px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
         }
 
         h3 {
             font-size: 16px;
             font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 8px;
+            margin-top: 22px;
+            margin-bottom: 10px;
             color: var(--text-primary);
         }
 
@@ -89,7 +125,7 @@
             margin-bottom: 14px;
         }
 
-        ul {
+        ul, ol {
             color: var(--text-secondary);
             margin-bottom: 14px;
             padding-left: 20px;
@@ -104,23 +140,23 @@
         }
 
         a {
-            color: var(--text-primary);
+            color: #0066cc;
             text-decoration: underline;
         }
 
         a:hover {
-            color: var(--text-secondary);
+            color: #004080;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            font-size: 14px;
+            font-size: 13.5px;
         }
 
         th, td {
-            padding: 10px 14px;
+            padding: 10px 12px;
             text-align: left;
             border: 1px solid var(--border-color);
         }
@@ -135,25 +171,13 @@
             color: var(--text-secondary);
         }
 
-        .highlight-box {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            padding: 16px 20px;
-            border-radius: 6px;
-            margin: 20px 0;
-        }
-
-        .highlight-box p {
-            margin-bottom: 0;
-            color: var(--text-primary);
-        }
-
         footer {
             margin-top: 60px;
-            padding-top: 20px;
+            padding-top: 24px;
             border-top: 1px solid var(--border-color);
             color: var(--text-secondary);
             font-size: 13px;
+            text-align: center;
         }
     </style>
 </head>
@@ -162,98 +186,257 @@
 <div class="container">
     <header>
         <h1>Privacy Policy</h1>
-        <div class="meta">Mini Weather &bull; Effective Date: August 11, 2026</div>
+        <div class="meta">Mini Weather: Cold Or Warm &bull; Effective Date: August 11, 2026</div>
     </header>
 
-    <div class="highlight-box">
-        <p><strong>Privacy Summary:</strong> Mini Weather is a privacy-first application. We do not collect, store, track, or share your personal data. All processing occurs locally on your device.</p>
+    <div class="notice-box">
+        <strong>Privacy-First Design:</strong> Mini Weather is designed to be privacy-first: there are no accounts, no sign-ups, no cloud sync, no advertising, and no third-party analytics.
     </div>
 
+    <nav class="toc">
+        <h3>Table of Contents</h3>
+        <ol>
+            <li><a href="#section1">Information Handling & Data Collection</a></li>
+            <li><a href="#section2">How Data Is Used</a></li>
+            <li><a href="#section3">Third-Party Services</a></li>
+            <li><a href="#section4">Data Retention and Deletion</a></li>
+            <li><a href="#section5">Third-Party Links & Resources</a></li>
+            <li><a href="#section6">Children's Privacy (COPPA & Global Standards)</a></li>
+            <li><a href="#section7">User Rights & Data Control (GDPR / CCPA / Global Laws)</a></li>
+            <li><a href="#section8">Security</a></li>
+            <li><a href="#section9">Changes to This Privacy Policy</a></li>
+            <li><a href="#section10">Contact Us</a></li>
+        </ol>
+    </nav>
+
     <main>
-        <section>
+        <section id="overview">
+            <p>This Privacy Policy explains what information <strong>Mini Weather</strong> ("the App") collects, how it is used, and the choices available to you. It applies to the iOS version of the App distributed on the Apple App Store.</p>
+            <p>This policy complies with Apple's App Store Review Guidelines (Section 5.1.1 — Data Collection and Storage) and is consistent with the App Privacy details ("nutrition label") shown on the App Store for this App.</p>
+        </section>
+
+        <section id="section1">
             <h2>1. Information Handling & Data Collection</h2>
-            <p>We do not operate external servers and do not collect or store personal information. Under App Store Privacy declarations, Mini Weather is classified as <strong>"No Data Collected"</strong>.</p>
+            <p>The developer does not operate any servers and does <strong>not</strong> collect, store, or transmit any personal data off-device. Per Apple App Store Data Safety definitions, the App declares <strong>"No Data Collected"</strong> because all data is processed ephemerally on-device solely to service real-time requests.</p>
 
             <table>
                 <thead>
                     <tr>
-                        <th>Data Category</th>
+                        <th>Data Type</th>
                         <th>Collected Off-Device</th>
-                        <th>Processed On-Device</th>
+                        <th>Processed (On-Device)</th>
                         <th>Purpose</th>
+                        <th>Linked to You</th>
+                        <th>Used for Tracking</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Location Data</strong></td>
+                        <td><strong>Location (precise & coarse)</strong></td>
                         <td>No</td>
-                        <td>Yes (Ephemeral)</td>
-                        <td>Fetch local weather and air quality conditions</td>
+                        <td>Yes (ephemeral)</td>
+                        <td>Show accurate local weather forecasts and air quality index</td>
+                        <td>No</td>
+                        <td>No</td>
                     </tr>
                     <tr>
                         <td><strong>Search Queries</strong></td>
                         <td>No</td>
-                        <td>Yes (Ephemeral)</td>
-                        <td>Resolve searched cities via geocoding API</td>
+                        <td>Yes (ephemeral)</td>
+                        <td>Resolve the city/place you search for via geocoding services</td>
+                        <td>No</td>
+                        <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>App Preferences</strong></td>
+                        <td><strong>Weather & App State</strong></td>
                         <td>No</td>
-                        <td>Yes (Local Cache)</td>
-                        <td>Save local settings and widget preferences</td>
+                        <td>Yes (on-device cache)</td>
+                        <td>Stored locally to display forecasts & widgets offline</td>
+                        <td>No</td>
+                        <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>Analytics & Tracking</strong></td>
+                        <td><strong>Identifiers</strong></td>
                         <td>No</td>
                         <td>No</td>
-                        <td>Zero ad frameworks or analytics SDKs</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Financial / Purchases</strong></td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Payments processed entirely by the App Store</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contacts, Photos, Health, Browsing</strong></td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usage Data / Diagnostics</strong></td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advertising / Tracking</strong></td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>The App contains zero ads, trackers, or analytics SDKs</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><em>All data processed on-device is not linked to your identity and is not used to track you in any way, per store guidelines.</em></p>
+        </section>
+
+        <section id="section2">
+            <h2>2. How Data Is Used</h2>
+
+            <h3>2.1 Location</h3>
+            <p>The App uses your device's location only to request weather for your current position. Your coordinates are sent over HTTPS to:</p>
+            <ul>
+                <li><strong>Apple WeatherKit</strong> &mdash; primary weather data provider; and</li>
+                <li><strong>WeatherAPI.com</strong> &mdash; air quality data and fallback weather source.</li>
+            </ul>
+            <p>Your location is never used to track you, is never combined with advertising, and is never sold. You can revoke or change location permission at any time via <em>iOS Settings &rarr; Privacy & Security &rarr; Location Services &rarr; Mini Weather</em>. If you deny location access, the App falls back to a location you select manually by city name.</p>
+
+            <h3>2.2 Search</h3>
+            <p>When you search for a city, the text you type is sent to Apple's geocoding service solely to resolve the place you are looking for. Search queries are not saved by the App.</p>
+
+            <h3>2.3 Local Device Storage</h3>
+            <p>The App stores the following data on your device only:</p>
+            <ul>
+                <li>Your manually selected location and recent search selections</li>
+                <li>Cached weather data (including a temperature snapshot used for the day-over-day comparison)</li>
+                <li>Preferences (temperature unit, distance unit, language, font style, forecast range, glass opacity, notification setting)</li>
+            </ul>
+            <p>Widget data is stored in the App's shared App Group container (<code>group.nothing_weather</code>) so the iOS Home and Lock Screen widgets can display it. <strong>None of this locally stored data is transmitted anywhere.</strong></p>
+
+            <h3>2.4 Notifications</h3>
+            <p>The optional daily morning briefing is scheduled locally on your device. The App does not use push notifications, and no notification data is collected.</p>
+        </section>
+
+        <section id="section3">
+            <h2>3. Third-Party Services</h2>
+            <p>The App shares only the minimum data required to function (your coordinates or selected city) with the following services:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Purpose</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Apple WeatherKit</strong></td>
+                        <td>Primary weather data</td>
+                        <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apple Geocoding (CLGeocoder)</strong></td>
+                        <td>Resolving city names and country codes</td>
+                        <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>WeatherAPI.com</strong></td>
+                        <td>Air quality index and fallback weather</td>
+                        <td><a href="https://www.weatherapi.com/privacy.aspx" target="_blank" rel="noopener">WeatherAPI.com Privacy Policy</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>All network requests are transmitted securely over HTTPS.</p>
+        </section>
+
+        <section id="section4">
+            <h2>4. Data Retention and Deletion</h2>
+            <ul>
+                <li>The developer does not operate servers and therefore does not retain any of your data.</li>
+                <li>All App data lives locally on your device.</li>
+                <li>You can delete all data at any time by <strong>uninstalling the App</strong>, or by resetting the App's data via <em>iOS Settings &rarr; General &rarr; iPhone Storage &rarr; Mini Weather</em>.</li>
+                <li>The App does not support account creation, so no in-app account-deletion flow is required (Apple's account-deletion requirement does not apply).</li>
+            </ul>
+        </section>
+
+        <section id="section5">
+            <h2>5. Third-Party Links & Resources</h2>
+            <p>The App may contain links to external websites (such as open-source project repositories, community social links, or documentation pages). The developer is not responsible for the privacy practices or content of third-party websites. Users are encouraged to review the privacy policies of any external services they visit.</p>
+        </section>
+
+        <section id="section6">
+            <h2>6. Children's Privacy (COPPA & Global Standards)</h2>
+            <p>Mini Weather does not knowingly collect or solicit personal information from children under the age of 13 (or 16 in the EEA). Because all processing is local and no personal data is gathered, no children's data is stored or shared.</p>
+            <p>The App is rated <strong>4+</strong> and is not directed at children. If you believe a child has provided information through the App, please contact the developer at the address below and any such data will be removed.</p>
+        </section>
+
+        <section id="section7">
+            <h2>7. User Rights & Data Control (GDPR / CCPA / Global Laws)</h2>
+            <p>Under global privacy regulations &mdash; including the GDPR, CCPA, CPRA, LGPD, and PIPEDA &mdash; you have the following rights:</p>
+            <ul>
+                <li><strong>Right to Access & Export</strong> &mdash; You can view and review all App data and preferences at any time directly within the App's Settings screen.</li>
+                <li><strong>Right to Erasure / Deletion</strong> &mdash; You can clear all application data at any time from the App Settings or via iOS System Settings (<em>Settings &rarr; General &rarr; iPhone Storage &rarr; Mini Weather</em>). Since all data resides locally on your device, clearing app storage permanently and irreversibly deletes all your data.</li>
+                <li><strong>Right to Revoke Permissions</strong> &mdash; You can revoke location permission (<em>iOS Settings &rarr; Privacy & Security &rarr; Location Services</em>) and disable notifications at any time.</li>
+                <li><strong>Do Not Sell or Share Personal Information</strong> &mdash; The developer does not sell, rent, or share personal information with third parties under any circumstances.</li>
+                <li><strong>Contact</strong> &mdash; Email the developer at any time with privacy questions, requests, or complaints. GDPR Art. 15&ndash;21 and California CCPA/CPRA requests can be sent to the contact below; because no data is collected by the developer, such requests are resolved by the controls listed above.</li>
+            </ul>
+        </section>
+
+        <section id="section8">
+            <h2>8. Security</h2>
+            <p>Privacy and security are safeguarded by the App's local-first architecture:</p>
+            <ul>
+                <li>No central database or cloud storage of weather data to breach.</li>
+                <li>All App data is stored in iOS's sandboxed, encrypted-on-device storage.</li>
+                <li>All network communications to weather and geocoding providers are encrypted using industry-standard TLS (HTTPS).</li>
+                <li>Permissions (location, notifications) are requested in-context, and location access can be limited to "While Using" the App.</li>
+            </ul>
+        </section>
+
+        <section id="section9">
+            <h2>9. Changes to This Privacy Policy</h2>
+            <p>This Privacy Policy may be updated to reflect future software enhancements or legal requirements. Updates will be indicated by the "Effective Date" at the top of this document. As the developer does not collect user contact information, updates will be published within the App and on the official website.</p>
+        </section>
+
+        <section id="section10">
+            <h2>10. Contact Us</h2>
+            <p>If you have any questions or feedback regarding this Privacy Policy or our privacy practices, please contact us:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><strong>Developer</strong></td>
+                        <td>Abhinav Kumar, operating as Apex Creators</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td><a href="mailto:abhinav.vikash2@gmail.com">abhinav.vikash2@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Official Website</strong></td>
+                        <td><a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Policy URL</strong></td>
+                        <td><a href="https://weareapexcreators.github.io/policies/mini_weather.html" target="_blank" rel="noopener">https://weareapexcreators.github.io/policies/mini_weather.html</a></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-
-        <section>
-            <h2>2. Location & Data Usage</h2>
-            <p>Location permissions are used solely to fetch weather conditions for your current coordinates. Your location data is sent over encrypted HTTPS connections to:</p>
-            <ul>
-                <li><strong>Apple WeatherKit</strong> &mdash; Weather data provider</li>
-                <li><strong>WeatherAPI.com</strong> &mdash; Air Quality Index (AQI) and fallback provider</li>
-            </ul>
-            <p>Your coordinates are never stored, tracked, or sold. Location access can be revoked at any time in <em>iOS Settings &rarr; Privacy & Security &rarr; Location Services &rarr; Mini Weather</em>.</p>
-        </section>
-
-        <section>
-            <h2>3. Local Storage</h2>
-            <p>All app settings, temperature unit preferences, cached weather reports, and widget states are stored strictly within your device's sandboxed storage (`group.nothing_weather`). None of this data is transmitted off-device.</p>
-        </section>
-
-        <section>
-            <h2>4. Third-Party Services</h2>
-            <p>The app communicates only with necessary service endpoints over secure HTTPS:</p>
-            <ul>
-                <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
-                <li><a href="https://www.weatherapi.com/privacy.aspx" target="_blank" rel="noopener">WeatherAPI.com Privacy Policy</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>5. Data Control & Rights</h2>
-            <p>You have total control over your data. Deleting the application or clearing app storage in iOS Settings permanently removes all cached data from your device.</p>
-        </section>
-
-        <section>
-            <h2>6. Contact</h2>
-            <p>For questions regarding this Privacy Policy, contact:</p>
-            <p>
-                <strong>Developer:</strong> Abhinav Kumar (Apex Creators)<br>
-                <strong>Email:</strong> <a href="mailto:abhinav.vikash2@gmail.com">abhinav.vikash2@gmail.com</a><br>
-                <strong>Website:</strong> <a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a>
-            </p>
-        </section>
     </main>
 
     <footer>
-        &copy; 2026 Abhinav Kumar. All rights reserved.
+        &copy; 2026 Abhinav Kumar / Apex Creators. All rights reserved.
     </footer>
 </div>
 
