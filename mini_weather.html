@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Mini Weather: Cold Or Warm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #38bdf8;
-            --border-color: #334155;
-            --table-header-bg: #0f172a;
-            --callout-bg: rgba(56, 189, 248, 0.08);
-            --callout-border: #38bdf8;
-            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --paper-bg: #fcfbf9;
+            --page-bg: #f3f0ea;
+            --text-main: #1c1d1f;
+            --text-muted: #52565e;
+            --navy-primary: #1b2a4a;
+            --gold-accent: #9a7b38;
+            --border-line: #d8d3c8;
+            --table-header-bg: #f5f2eb;
+            --clause-bg: #f8f6f0;
+            --font-heading: 'Cinzel', 'EB Garamond', Georgia, serif;
+            --font-serif: 'EB Garamond', Georgia, serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        @media (prefers-color-scheme: light) {
+        @media (prefers-color-scheme: dark) {
             :root {
-                --bg-color: #f8fafc;
-                --card-bg: #ffffff;
-                --text-primary: #0f172a;
-                --text-secondary: #475569;
-                --accent-color: #0284c7;
-                --border-color: #e2e8f0;
-                --table-header-bg: #f1f5f9;
-                --callout-bg: rgba(2, 132, 199, 0.06);
-                --callout-border: #0284c7;
+                --paper-bg: #121824;
+                --page-bg: #0a0e17;
+                --text-main: #e6e8ec;
+                --text-muted: #9ba3b0;
+                --navy-primary: #60a5fa;
+                --gold-accent: #d4af37;
+                --border-color: #242f45;
+                --border-line: #242f45;
+                --table-header-bg: #1a2234;
+                --clause-bg: #161e2e;
             }
         }
 
@@ -39,270 +45,371 @@
         }
 
         body {
-            font-family: var(--font-family);
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.65;
-            padding: 2rem 1rem;
+            font-family: var(--font-serif);
+            background-color: var(--page-bg);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 1.08rem;
+            padding: 3rem 1rem;
         }
 
-        .container {
-            max-width: 860px;
+        .document-wrapper {
+            max-width: 900px;
             margin: 0 auto;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            background: var(--paper-bg);
+            border: 1px solid var(--border-line);
+            padding: 4rem 4.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            position: relative;
         }
 
-        h1 {
-            font-size: 2.2rem;
+        /* Top Header Seal Bar */
+        .legal-header-bar {
+            text-align: center;
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-firm-title {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold-accent);
             font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
             margin-bottom: 0.5rem;
         }
 
-        h2 {
-            font-size: 1.4rem;
+        .legal-doc-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--navy-primary);
+            letter-spacing: -0.01em;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .legal-subtitle {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+        }
+
+        /* Metadata Block */
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            background: var(--table-header-bg);
+            border: 1px solid var(--border-line);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+        }
+
+        .metadata-item span {
+            color: var(--text-muted);
+            display: block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.2rem;
+        }
+
+        .metadata-item strong {
+            color: var(--text-main);
             font-weight: 600;
-            color: var(--text-primary);
-            margin-top: 2rem;
+        }
+
+        /* Executive Summary Callout */
+        .executive-summary {
+            border: 1px solid var(--gold-accent);
+            background: var(--clause-bg);
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+        }
+
+        .executive-summary-title {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold-accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Table of Contents */
+        .toc-box {
+            border-top: 1px solid var(--border-line);
+            border-bottom: 1px solid var(--border-line);
+            padding: 1.5rem 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .toc-box h3 {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--navy-primary);
+            margin-bottom: 1rem;
+        }
+
+        .toc-box ol {
+            column-count: 2;
+            column-gap: 2rem;
+            padding-left: 1.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+        }
+
+        .toc-box li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-box a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--text-muted);
+        }
+
+        .toc-box a:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            color: var(--navy-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin-bottom: 1rem;
             padding-bottom: 0.4rem;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-line);
         }
 
         h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-top: 1.2rem;
-            margin-bottom: 0.6rem;
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            color: var(--navy-primary);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
         p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            text-align: justify;
         }
 
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .metadata-table, .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .metadata-table th, .metadata-table td,
-        .data-table th, .data-table td {
-            padding: 0.75rem 1rem;
-            text-align: left;
-            border: 1px solid var(--border-color);
-        }
-
-        .metadata-table th, .data-table th {
-            background-color: var(--table-header-bg);
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .metadata-table td {
-            color: var(--text-secondary);
-        }
-
-        .metadata-table td strong {
-            color: var(--text-primary);
-        }
-
-        .notice-box {
-            background-color: var(--callout-bg);
-            border-left: 4px solid var(--callout-border);
-            padding: 1.2rem;
-            border-radius: 4px;
-            margin: 1.5rem 0;
-            color: var(--text-primary);
-            font-size: 0.98rem;
-        }
-
-        .toc {
-            background-color: var(--table-header-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.25rem 1.5rem;
-            margin: 1.5rem 0 2rem 0;
-        }
-
-        .toc h3 {
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-        }
-
-        .toc ol {
-            padding-left: 1.2rem;
-        }
-
-        .toc li {
-            margin-bottom: 0.4rem;
-        }
-
-        .toc a {
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        ul {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            color: var(--text-secondary);
+        ul, ol {
+            margin-bottom: 1.2rem;
+            padding-left: 1.8rem;
         }
 
         li {
             margin-bottom: 0.4rem;
         }
 
-        footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 0.88rem;
-            color: var(--text-secondary);
+        a {
+            color: var(--navy-primary);
+            text-decoration: underline;
         }
 
-        @media (max-width: 640px) {
+        /* Formal Legal Data Matrix Table */
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-family: var(--font-sans);
+            font-size: 0.88rem;
+        }
+
+        .legal-table th, .legal-table td {
+            border: 1px solid var(--border-line);
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+
+        .legal-table th {
+            background-color: var(--table-header-bg);
+            font-family: var(--font-heading);
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--navy-primary);
+        }
+
+        .legal-table tr:nth-child(even) {
+            background-color: var(--clause-bg);
+        }
+
+        /* Sign-off / Signature Footer */
+        .legal-footer-signature {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--gold-accent);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .firm-seal {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--navy-primary);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
             body {
                 padding: 1rem 0.5rem;
             }
-            .container {
-                padding: 1.25rem;
+            .document-wrapper {
+                padding: 2rem 1.5rem;
             }
-            h1 {
-                font-size: 1.8rem;
+            .legal-doc-title {
+                font-size: 1.7rem;
             }
-            .metadata-table, .data-table {
-                font-size: 0.85rem;
+            .metadata-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-box ol {
+                column-count: 1;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+                color: #000;
+                padding: 0;
+            }
+            .document-wrapper {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <h1>Privacy Policy</h1>
-        <p><strong>Mini Weather: Cold Or Warm</strong></p>
-    </header>
-
-    <table class="metadata-table">
-        <tr>
-            <th>Attribute</th>
-            <th>Details</th>
-        </tr>
-        <tr>
-            <td><strong>App Store Name</strong></td>
-            <td>Mini Weather: Cold Or Warm</td>
-        </tr>
-        <tr>
-            <td><strong>Home Screen Label</strong></td>
-            <td>Mini Weather</td>
-        </tr>
-        <tr>
-            <td><strong>Developer</strong></td>
-            <td>Abhinav Kumar, operating as Apex Creators ("I", "we", "me", "my")</td>
-        </tr>
-        <tr>
-            <td><strong>Contact Email</strong></td>
-            <td><a href="mailto:abhinav.vikash2@gmail.com">abhinav.vikash2@gmail.com</a></td>
-        </tr>
-        <tr>
-            <td><strong>Official Website</strong></td>
-            <td><a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></td>
-        </tr>
-        <tr>
-            <td><strong>Effective Date</strong></td>
-            <td>August 11, 2026</td>
-        </tr>
-        <tr>
-            <td><strong>Regulatory Compliance</strong></td>
-            <td>Apple App Store Review Guidelines Section 5.1.1 (Data Collection and Storage)</td>
-        </tr>
-    </table>
-
-    <div class="notice-box">
-        <strong>Privacy-First Architecture:</strong> Mini Weather is engineered with a strict local-first, zero-tracking design. There are no user accounts, no sign-ups, no cloud databases, no advertisements, and no third-party analytics SDKs.
+<div class="document-wrapper">
+    <div class="legal-header-bar">
+        <div class="legal-firm-title">Apex Creators &bull; Legal & Regulatory Counsel</div>
+        <h1 class="legal-doc-title">Privacy Policy</h1>
+        <div class="legal-subtitle">Mini Weather: Cold Or Warm &bull; Application Privacy Governance Document</div>
     </div>
 
-    <nav class="toc">
+    <div class="metadata-grid">
+        <div class="metadata-item">
+            <span>Application Title</span>
+            <strong>Mini Weather: Cold Or Warm</strong>
+        </div>
+        <div class="metadata-item">
+            <span>Home Screen Identifier</span>
+            <strong>Mini Weather</strong>
+        </div>
+        <div class="metadata-item">
+            <span>Developer & Entity</span>
+            <strong>Abhinav Kumar (d/b/a Apex Creators)</strong>
+        </div>
+        <div class="metadata-item">
+            <span>Official Legal Contact</span>
+            <strong><a href="mailto:abhinav.vikash2@gmail.com">abhinav.vikash2@gmail.com</a></strong>
+        </div>
+        <div class="metadata-item">
+            <span>Effective Date</span>
+            <strong>August 11, 2026</strong>
+        </div>
+        <div class="metadata-item">
+            <span>Regulatory Framework</span>
+            <strong>Apple App Store Guidelines (§5.1.1 Data Protection)</strong>
+        </div>
+    </div>
+
+    <div class="executive-summary">
+        <div class="executive-summary-title">Executive Summary & Legal Notice</div>
+        Mini Weather is architected under a strict <strong>local-first privacy framework</strong>. The application operates without user account registration, cloud database persistence, remote telemetry, advertising networks, or third-party analytics SDKs. All data operations are executed ephemerally on-device.
+    </div>
+
+    <nav class="toc-box">
         <h3>Table of Contents</h3>
         <ol>
-            <li><a href="#section1">Information Handling & Data Collection</a></li>
-            <li><a href="#section2">How Data Is Used</a></li>
-            <li><a href="#section3">Third-Party Services</a></li>
-            <li><a href="#section4">Data Retention & Deletion</a></li>
-            <li><a href="#section5">Third-Party Links & Resources</a></li>
-            <li><a href="#section6">Children's Privacy (COPPA & Global Standards)</a></li>
-            <li><a href="#section7">User Rights & Data Control (GDPR / CCPA / Global Laws)</a></li>
-            <li><a href="#section8">Security</a></li>
-            <li><a href="#section9">Changes to This Privacy Policy</a></li>
-            <li><a href="#section10">Contact Us</a></li>
+            <li><a href="#section1">1. Information Handling & Data Collection</a></li>
+            <li><a href="#section2">2. Purpose & Processing Operations</a></li>
+            <li><a href="#section3">3. Third-Party Service Handlers</a></li>
+            <li><a href="#section4">4. Data Retention & Erasure</a></li>
+            <li><a href="#section5">5. External References & Resources</a></li>
+            <li><a href="#section6">6. Protection of Minors (COPPA & Global Standards)</a></li>
+            <li><a href="#section7">7. Statutory Rights (GDPR / CCPA / Global Laws)</a></li>
+            <li><a href="#section8">8. Technical & Architectural Security</a></li>
+            <li><a href="#section9">9. Policy Amendments</a></li>
+            <li><a href="#section10">10. Contact & Legal Notice</a></li>
         </ol>
     </nav>
 
     <main>
         <section id="overview">
-            <h2>Overview</h2>
-            <p>This Privacy Policy explains what information <strong>Mini Weather</strong> ("the App") processes, how it is used, and the privacy controls available to you. It applies to the iOS application distributed on the Apple App Store.</p>
-            <p>The App complies with Apple's App Store Review Guidelines (Section 5.1.1 — Data Collection and Storage) and accurately reflects the App Privacy Details ("Nutrition Label") displayed on the App Store product page.</p>
+            <h2>Overview & Scope</h2>
+            <p>This Privacy Policy sets forth the principles and practices governing the processing of technical data by <strong>Mini Weather</strong> ("the Application"). Distributed via the Apple App Store, the Application is designed to strictly satisfy Apple's App Store Review Guidelines (Section 5.1.1 &mdash; Data Collection and Storage) and accurately corresponds to the App Privacy Details disclosed on the App Store product page.</p>
         </section>
 
         <section id="section1">
             <h2>1. Information Handling & Data Collection</h2>
-            <p>The developer does not operate external servers and does not collect, store, or transmit any personal data off your device. Per Apple App Store Data Safety declarations, the App is classified as <strong>"No Data Collected"</strong> because all data processing is performed ephemerally on-device solely to service real-time requests.</p>
+            <p>The Developer does not maintain remote user databases or cloud servers. The Application declares <strong>"No Data Collected"</strong> under App Store Data Safety definitions because no user data is collected off-device or associated with persistent user identifiers.</p>
 
-            <table class="data-table">
+            <table class="legal-table">
                 <thead>
                     <tr>
-                        <th>Data Type</th>
-                        <th>Collected Off-Device</th>
-                        <th>Processed (On-Device)</th>
-                        <th>Purpose</th>
-                        <th>Linked to You</th>
-                        <th>Used for Tracking</th>
+                        <th>Data Category</th>
+                        <th>Off-Device Transmission</th>
+                        <th>On-Device Processing</th>
+                        <th>Primary Purpose</th>
+                        <th>Identifiable</th>
+                        <th>Tracking Use</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Location (Precise & Coarse)</strong></td>
+                        <td><strong>Location Data (Coarse / Precise)</strong></td>
                         <td>No</td>
                         <td>Yes (Ephemeral)</td>
-                        <td>Display local weather forecasts & Air Quality Index (AQI)</td>
+                        <td>Fetch real-time weather forecasts & Air Quality Index (AQI)</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>Search Queries</strong></td>
+                        <td><strong>City Search Queries</strong></td>
                         <td>No</td>
                         <td>Yes (Ephemeral)</td>
-                        <td>Resolve city/place searches via Apple geocoding services</td>
+                        <td>Resolve geographical locations via Apple geocoding API</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>Weather & App State</strong></td>
+                        <td><strong>Weather State & Settings</strong></td>
                         <td>No</td>
                         <td>Yes (Local Cache)</td>
-                        <td>Store forecasts & snapshots locally for offline access & widgets</td>
+                        <td>Store preferences & forecasts locally for widgets & offline access</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
@@ -310,23 +417,23 @@
                         <td><strong>User Identifiers</strong></td>
                         <td>No</td>
                         <td>No</td>
-                        <td>—</td>
+                        <td>Not collected or generated</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>Financial & Purchases</strong></td>
+                        <td><strong>Financial Transactions</strong></td>
                         <td>No</td>
                         <td>No</td>
-                        <td>Handled entirely & securely by Apple App Store</td>
+                        <td>Processed strictly by Apple Store In-App Commerce</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>Contacts, Photos, Health</strong></td>
+                        <td><strong>Contacts, Media, Health</strong></td>
                         <td>No</td>
                         <td>No</td>
-                        <td>—</td>
+                        <td>No access requested</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
@@ -334,159 +441,155 @@
                         <td><strong>Diagnostics & Analytics</strong></td>
                         <td>No</td>
                         <td>No</td>
-                        <td>Zero analytics or telemetry SDKs integrated</td>
+                        <td>No analytics, crashlytics, or tracking SDKs present</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
                     <tr>
-                        <td><strong>Advertising Data</strong></td>
+                        <td><strong>Advertising Identifiers</strong></td>
                         <td>No</td>
                         <td>No</td>
-                        <td>Zero advertisements or tracking SDKs integrated</td>
+                        <td>No advertisements or tracking frameworks integrated</td>
                         <td>No</td>
                         <td>No</td>
                     </tr>
                 </tbody>
             </table>
-            <p><em>All data processed on-device is non-identifiable, not linked to your identity, and never used for tracking.</em></p>
         </section>
 
         <section id="section2">
-            <h2>2. How Data Is Used</h2>
+            <h2>2. Purpose & Processing Operations</h2>
 
-            <h3>2.1 Location Services</h3>
-            <p>The App requests access to your device's location solely to fetch real-time weather conditions for your current coordinate position. Coordinates are transmitted securely via encrypted HTTPS to:</p>
+            <h3>2.1 Location Data Processing</h3>
+            <p>The Application requests temporary location permission solely to determine geographical coordinates for local weather retrieval. Coordinates are transmitted via encrypted TLS (HTTPS) to:</p>
             <ul>
-                <li><strong>Apple WeatherKit</strong> — Primary weather data provider; and</li>
-                <li><strong>WeatherAPI.com</strong> — Air Quality Index (AQI) data provider & fallback source.</li>
+                <li><strong>Apple WeatherKit</strong> &mdash; Primary meteorological data service; and</li>
+                <li><strong>WeatherAPI.com</strong> &mdash; Air Quality Index (AQI) data service and secondary fallback source.</li>
             </ul>
-            <p>Your location is never used to track your movements, is never combined with advertising IDs, and is never sold or shared. You may grant, modify, or revoke location access at any time via <em>iOS Settings → Privacy & Security → Location Services → Mini Weather</em>. If location access is denied, the App seamlessly falls back to your manually selected city.</p>
+            <p>Location data is never stored off-device, never combined with ad networks, and never sold. Users may grant, modify, or revoke location access at any time via <em>iOS Settings &rarr; Privacy & Security &rarr; Location Services &rarr; Mini Weather</em>. If access is revoked, the Application permits manual city search and selection.</p>
 
-            <h3>2.2 City Search</h3>
-            <p>When you search for a city, your query string is sent securely to Apple's geocoding service (<code>CLGeocoder</code>) to resolve geographical coordinates. Search terms are not stored or retained.</p>
+            <h3>2.2 Geocoding Queries</h3>
+            <p>When searching for a city, the query string is transmitted securely to Apple's <code>CLGeocoder</code> API solely to resolve coordinate bounds. Search strings are not logged or stored.</p>
 
-            <h3>2.3 Local Device Storage</h3>
-            <p>The App stores the following data strictly on your device:</p>
+            <h3>2.3 Local Device Cache</h3>
+            <p>The Application maintains local key-value storage on your iOS device for:</p>
             <ul>
-                <li>Selected location name and recent search queries.</li>
-                <li>Cached weather data & day-over-day temperature snapshots.</li>
-                <li>User preferences (temperature unit, distance unit, language, font style, forecast range, glass opacity, notification settings).</li>
-                <li>Widget state in the shared App Group container (<code>group.nothing_weather</code>) for Home & Lock Screen widgets.</li>
+                <li>Selected city names and recent search queries;</li>
+                <li>Cached weather data and day-over-day temperature snapshots;</li>
+                <li>User preferences (temperature unit, distance unit, language, font style, forecast range, glass opacity, notification settings); and</li>
+                <li>Widget payload stored inside the shared App Group container (<code>group.nothing_weather</code>) for iOS Home and Lock Screen widgets.</li>
             </ul>
-            <p><strong>None of this locally stored data is ever transmitted off your device.</strong></p>
 
             <h3>2.4 Local Notifications</h3>
-            <p>The optional morning weather briefing is scheduled locally on your device. The App does not use remote push notifications, and no notification telemetry is collected.</p>
+            <p>The optional daily briefing feature schedules notifications locally on your device. The Application does not utilize remote push servers, and no notification activity is reported off-device.</p>
         </section>
 
         <section id="section3">
-            <h2>3. Third-Party Services</h2>
-            <p>The App transmits only the minimum required non-identifiable parameters (coordinates or city name) over secure HTTPS to the following third-party APIs:</p>
+            <h2>3. Third-Party Service Handlers</h2>
+            <p>Network requests are restricted to minimal non-identifiable parameters (coordinates or city strings) over HTTPS with the following services:</p>
 
-            <table class="data-table">
+            <table class="legal-table">
                 <thead>
                     <tr>
-                        <th>Provider</th>
-                        <th>Purpose</th>
-                        <th>Privacy Policy</th>
+                        <th>Service Provider</th>
+                        <th>Scope of Operation</th>
+                        <th>Legal Terms</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><strong>Apple WeatherKit</strong></td>
-                        <td>Primary weather data provider</td>
+                        <td>Primary weather data processing</td>
                         <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></td>
                     </tr>
                     <tr>
-                        <td><strong>Apple Geocoding (<code>CLGeocoder</code>)</strong></td>
-                        <td>Resolving city names & country codes</td>
+                        <td><strong>Apple Geocoding Services</strong></td>
+                        <td>Reverse geocoding & location resolution</td>
                         <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></td>
                     </tr>
                     <tr>
                         <td><strong>WeatherAPI.com</strong></td>
-                        <td>Air Quality Index & fallback forecast data</td>
+                        <td>Air Quality Index & fallback forecasts</td>
                         <td><a href="https://www.weatherapi.com/privacy.aspx" target="_blank" rel="noopener">WeatherAPI.com Privacy Policy</a></td>
                     </tr>
                 </tbody>
             </table>
-            <p>All communication occurs strictly over encrypted Transport Layer Security (TLS / HTTPS).</p>
         </section>
 
         <section id="section4">
-            <h2>4. Data Retention & Deletion</h2>
+            <h2>4. Data Retention & Erasure</h2>
             <ul>
-                <li><strong>Zero Server Retention:</strong> The developer operates no central databases or user servers; therefore, no user data is retained off-device.</li>
-                <li><strong>Local Erasure:</strong> All app data lives locally on your device. You can permanently erase all stored app data at any time by uninstalling the App or clearing storage via <em>iOS Settings → General → iPhone Storage → Mini Weather → Delete App</em>.</li>
-                <li><strong>No Account Flow Required:</strong> Because Mini Weather does not feature user accounts, Apple's in-app account deletion mandate (Guideline 5.1.1(v)) does not apply.</li>
+                <li><strong>Zero Remote Retention:</strong> Because no central servers are maintained by the Developer, no remote user records exist to retain or delete.</li>
+                <li><strong>User-Initiated Deletion:</strong> You may permanently purge all application cache and settings by uninstalling the Application or navigating to <em>iOS Settings &rarr; General &rarr; iPhone Storage &rarr; Mini Weather &rarr; Delete App</em>.</li>
+                <li><strong>Account Deletion Standard:</strong> As no user accounts exist, Apple's in-app account deletion requirement (Guideline 5.1.1(v)) does not apply.</li>
             </ul>
         </section>
 
         <section id="section5">
-            <h2>5. Third-Party Links & Resources</h2>
-            <p>The App may contain links to external web pages (such as open-source documentation or developer pages). The developer is not responsible for the content or privacy practices of third-party websites. Users are encouraged to review the policies of external sites upon visiting.</p>
+            <h2>5. External References & Resources</h2>
+            <p>The Application may contain hyperlinks to external sites (such as legal documentation or attribution resources). The Developer is not responsible for the privacy standards of external websites. Users are advised to inspect the policies of third-party domains upon visiting.</p>
         </section>
 
         <section id="section6">
-            <h2>6. Children's Privacy (COPPA & Global Standards)</h2>
-            <p>Mini Weather is rated 4+ and does not knowingly collect, solicit, or store personal information from children under the age of 13 (or 16 in the European Economic Area). Because all processing is conducted locally on-device without personal data collection, no children's data is gathered or shared.</p>
-            <p>If you believe a child has provided information through the App, please contact the developer, and any such local data will be promptly addressed.</p>
+            <h2>6. Protection of Minors (COPPA & EEA Standards)</h2>
+            <p>Mini Weather is rated 4+ and does not knowingly solicit or collect personal data from children under the age of 13 (or 16 within the European Economic Area). In accordance with COPPA and global child protection laws, because no personal information is gathered, no minor data is stored or distributed.</p>
         </section>
 
         <section id="section7">
-            <h2>7. User Rights & Data Control (GDPR / CCPA / Global Laws)</h2>
-            <p>Under global privacy frameworks — including the GDPR, CCPA / CPRA, LGPD, and PIPEDA — you maintain full authority over your data:</p>
+            <h2>7. Statutory Rights (GDPR, CCPA/CPRA, LGPD)</h2>
+            <p>Under applicable international privacy mandates &mdash; including the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA/CPRA) &mdash; users possess statutory rights concerning their data:</p>
             <ul>
-                <li><strong>Right to Access & Review:</strong> View all cached settings and preferences directly in the App's Settings screen.</li>
-                <li><strong>Right to Erasure / Deletion:</strong> Permanently delete all local data by removing the App or clearing app storage in iOS Settings.</li>
-                <li><strong>Right to Revoke Permissions:</strong> Revoke location access (<em>iOS Settings → Privacy & Security → Location Services</em>) or disable notifications at any time.</li>
-                <li><strong>Do Not Sell or Share Personal Data:</strong> We do not sell, rent, or share personal data under any circumstances.</li>
-                <li><strong>Privacy Inquiries:</strong> Send privacy questions directly to the developer contact listed below.</li>
+                <li><strong>Right of Access & Inspection:</strong> Review all cached preferences directly within the Application's Settings panel.</li>
+                <li><strong>Right to Erasure:</strong> Erase all local state at any time by removing the Application.</li>
+                <li><strong>Right to Revoke Permissions:</strong> Manage location and notification authorizations within iOS System Settings.</li>
+                <li><strong>Non-Sale Guarantee:</strong> The Developer does not sell, rent, or share personal data under any circumstances.</li>
             </ul>
         </section>
 
         <section id="section8">
-            <h2>8. Security</h2>
-            <p>Security is built directly into the App's architecture:</p>
+            <h2>8. Technical & Architectural Security</h2>
+            <p>The Application enforces robust technical safeguards:</p>
             <ul>
-                <li><strong>No Central Database:</strong> Zero cloud databases or servers to compromise.</li>
-                <li><strong>iOS Sandbox Protection:</strong> All local state is stored inside iOS's sandboxed, encrypted-at-rest container.</li>
-                <li><strong>Encrypted In-Transit:</strong> 100% of network traffic uses TLS 1.3 / HTTPS encryption.</li>
-                <li><strong>In-Context Permissions:</strong> Location access is requested explicitly and can be restricted to "While Using the App".</li>
+                <li><strong>Sandboxed Isolation:</strong> Local configuration data resides within iOS's encrypted-at-rest application sandbox.</li>
+                <li><strong>TLS Transmission:</strong> 100% of network traffic uses Transport Layer Security (TLS 1.3 / HTTPS).</li>
+                <li><strong>Explicit Authorizations:</strong> Location access is requested in-context and restricted to active usage ("While Using").</li>
             </ul>
         </section>
 
         <section id="section9">
-            <h2>9. Changes to This Privacy Policy</h2>
-            <p>This Privacy Policy may be updated periodically to reflect software enhancements or regulatory changes. Revisions will be indicated by the Effective Date at the top of this document and published within the App and on the official website.</p>
+            <h2>9. Policy Amendments</h2>
+            <p>The Developer reserves the right to modify this Privacy Policy to reflect technical updates or legal revisions. Amendments will be published with an updated Effective Date at the top of this document.</p>
         </section>
 
         <section id="section10">
-            <h2>10. Contact Us</h2>
-            <p>For any privacy-related questions, feedback, or legal inquiries, please contact:</p>
-            <table class="metadata-table">
+            <h2>10. Contact & Legal Notice</h2>
+            <p>Inquiries concerning this Privacy Policy may be directed to:</p>
+
+            <table class="legal-table">
                 <tr>
-                    <td><strong>Developer</strong></td>
-                    <td>Abhinav Kumar, operating as Apex Creators</td>
+                    <td><strong>Developer Entity</strong></td>
+                    <td>Abhinav Kumar (operating as Apex Creators)</td>
                 </tr>
                 <tr>
-                    <td><strong>Email</strong></td>
+                    <td><strong>Legal Inquiries Email</strong></td>
                     <td><a href="mailto:abhinav.vikash2@gmail.com">abhinav.vikash2@gmail.com</a></td>
                 </tr>
                 <tr>
-                    <td><strong>Official Website</strong></td>
+                    <td><strong>Official Portal</strong></td>
                     <td><a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></td>
                 </tr>
                 <tr>
-                    <td><strong>Online Policy Link</strong></td>
+                    <td><strong>Published Document URL</strong></td>
                     <td><a href="https://weareapexcreators.github.io/policies/mini_weather.md" target="_blank" rel="noopener">https://weareapexcreators.github.io/policies/mini_weather.md</a></td>
                 </tr>
             </table>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Abhinav Kumar / Apex Creators. All rights reserved.</p>
-    </footer>
+    <div class="legal-footer-signature">
+        <div class="firm-seal">Apex Creators &bull; Official Document</div>
+        <div>&copy; 2026 Abhinav Kumar. All rights reserved.</div>
+    </div>
 </div>
 
 </body>
