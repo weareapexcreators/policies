@@ -1,6 +1,6 @@
 Privacy Policy for LocalAI: Offline AI Chat LLM
 
-Effective Date: July 30, 2026
+Effective Date: August 13, 2026
 
 ================================================================================
 
@@ -18,9 +18,10 @@ NOT sell your data, do NOT run tracking scripts, and do NOT maintain cloud serve
 to collect your conversations.
 
 This Privacy Policy outlines our data handling practices in compliance with
-the Google Play Store Developer Policies, Apple App Store Review Guidelines,
-General Data Protection Regulation (GDPR), California Consumer Privacy Act
-(CCPA / CPRA), and Children's Online Privacy Protection Act (COPPA) as of July 2026.
+the Apple App Store Review Guidelines (specifically Guideline 5.1.1 Data
+Collection & Storage), Google Play Store Developer Policies, General Data Protection
+Regulation (GDPR), California Consumer Privacy Act (CCPA / CPRA), and Children's
+Online Privacy Protection Act (COPPA) as of August 2026.
 
 ================================================================================
 
@@ -46,40 +47,64 @@ personal identity information to use the App.
 The App is 100% AD-FREE. We do not use Google AdMob, Unity Ads, Meta Audience
 Network, or any other third-party advertising SDKs.
 - No Advertising Identifiers: We do not access, collect, or store device Advertising
-  IDs (Android Advertising ID / Apple IDFA).
+  IDs (Apple IDFA / Android Advertising ID).
 - No App Tracking: The App does not track you across third-party websites or apps.
   Under Apple's App Tracking Transparency (ATT) framework and Google's Play Data
   Safety guidelines, LocalAI collects zero tracking data.
 
 ================================================================================
 
-3. Optional External Network Connections
+3. External Network Connections & Third-Party Privacy Policies
 
 LocalAI operates completely offline once models are downloaded. Internet access
-is used strictly for the following optional features:
+is used strictly for optional features and third-party open-source downloads.
+Below are the third-party services that may be accessed, along with direct links
+to their respective privacy policies:
 
 3.1 Open-Source Model Downloads (Hugging Face)
 When you browse or download open-source GGUF AI models in the Models Hub, your
 device connects directly via HTTPS to Hugging Face (huggingface.co). Standard
-HTTP routing data (such as your IP address) is handled by Hugging Face according
-to their privacy policy. We do not track or log which models you download.
+HTTP network requests (including your IP address) are processed directly by
+Hugging Face in accordance with their privacy policy:
+- Hugging Face Privacy Policy: https://huggingface.co/privacy
+We do not track, log, or record which models you download.
 
-3.2 Optional Cloud Providers (Bring Your Own Key - BYOK)
+3.2 Open-Source Fonts & Static Resources (Google Fonts)
+The App may utilize open-source font families (such as Inter, Roboto, or Outfit)
+provided via Google Fonts. Static typography assets or API font references are
+governed by Google's Privacy Policy:
+- Google Privacy Policy: https://policies.google.com/privacy
+
+3.3 In-App Purchases & Subscriptions (Apple App Store / Google Play)
+If you choose to support development by purchasing an optional subscription or
+in-app item:
+- Financial transactions, billing details, and receipt validation are processed
+  directly and securely by Apple (App Store) or Google (Play Store).
+- LocalAI does NOT receive, process, or store your credit card numbers or payment credentials.
+- Apple Privacy Policy: https://www.apple.com/legal/privacy/
+- Google Privacy Policy: https://policies.google.com/privacy
+
+3.4 Optional Cloud Providers (Bring Your Own Key - BYOK)
 If you explicitly choose to configure third-party Cloud Providers (such as OpenAI,
-Anthropic, or OpenRouter) in Settings:
-- Your API keys are encrypted and stored solely on your device (using Android Keystore
-  / Secure Storage).
-- Session prompts and messages are sent directly from your device to the selected
-  provider's official API endpoint.
-- We do not proxy, inspect, intercept, or store any data sent to cloud providers.
-- Data sent to third-party providers is governed by that specific provider's privacy policy.
+Anthropic, OpenRouter, Google Gemini, Groq, or Mistral AI) in Settings:
+- Your API keys are encrypted and stored solely on your device in hardware-backed secure storage.
+- Session prompts and messages are transmitted directly from your device to the selected
+  provider's official API endpoint via TLS/HTTPS.
+- We do not proxy, inspect, intercept, or store any data sent to third-party cloud providers.
+- Data sent to third-party providers is governed by their respective privacy policies:
+  * OpenAI Privacy Policy:       https://openai.com/privacy/
+  * Anthropic Privacy Policy:    https://privacy.anthropic.com/
+  * OpenRouter Privacy Policy:   https://openrouter.ai/privacy
+  * Google Gemini Privacy Policy: https://policies.google.com/privacy
+  * Groq Privacy Policy:         https://groq.com/privacy-policy/
+  * Mistral AI Privacy Policy:   https://mistral.ai/terms/#privacy-policy
 
 ================================================================================
 
 4. Local Device Permissions
 
 LocalAI requests only essential device permissions to enable local features. All
-data accessed through these permissions remains on your device:
+data accessed through these permissions remains strictly on your local device:
 
 - Storage / Media Permission: Used to save downloaded GGUF AI models locally, to
   read documents attached by you, and to store local chat database backups.
@@ -90,12 +115,22 @@ data accessed through these permissions remains on your device:
 
 ================================================================================
 
-5. Third-Party Links & Resources
+5. Third-Party Links & External Privacy Policy Direct Index
 
-The App may contain links to external websites (such as open-source project repositories,
-community social links, or Hugging Face model pages). We are not responsible for
-the privacy practices or content of third-party websites. We encourage you to review
-the privacy policies of any external services you visit.
+For ease of access and compliance with Apple App Store Review Guidelines (Guideline 5.1.1(i)),
+here is the direct directory of third-party privacy policies:
+
+- Hugging Face Privacy Policy:   https://huggingface.co/privacy
+- Google Privacy Policy:         https://policies.google.com/privacy
+- Apple Privacy Policy:          https://www.apple.com/legal/privacy/
+- OpenAI Privacy Policy:         https://openai.com/privacy/
+- Anthropic Privacy Policy:      https://privacy.anthropic.com/
+- OpenRouter Privacy Policy:     https://openrouter.ai/privacy
+- Groq Privacy Policy:           https://groq.com/privacy-policy/
+- Mistral AI Privacy Policy:     https://mistral.ai/terms/#privacy-policy
+
+We are not responsible for the privacy practices or content of third-party websites
+or APIs. We encourage you to review the privacy policies of any external services you interact with.
 
 ================================================================================
 
@@ -110,25 +145,29 @@ that minors under 18 use the App under parental or legal guardian supervision.
 
 ================================================================================
 
-7. User Rights & Data Control (GDPR / CCPA / Global Laws)
+7. User Rights & Complete Data Erasure (Apple Store Guideline 5.1.1(v) & GDPR/CCPA)
 
-Under global privacy regulations (including GDPR, CCPA, CPRA, LGPD, and PIPEDA):
+Under global privacy regulations (including GDPR, CCPA/CPRA, LGPD, PIPEDA, and Apple
+Developer Guidelines):
 - Right to Access & Export: You can view, copy, or export your full chat history
   at any time directly within the App.
-- Right to Erasure / Deletion: You can clear individual chat sessions, delete stored
-  models, or clear all application data at any time from the App Settings or via
-  Android/iOS System Settings. Since all data resides locally on your device, clearing
-  app storage permanently and irreversibly deletes all your data.
+- Right to Immediate Erasure / Deletion: You have total control over all local data.
+  * Individual Session Deletion: Swipe or tap delete on any chat session to permanently remove it.
+  * Clear All Data: Go to App Settings -> Clear All Data to immediately purge all stored chat logs,
+    saved documents, and hardware-stored API keys.
+  * Model Deletion: Delete downloaded GGUF models anytime from the Models Hub.
+  * App Uninstallation: Uninstalling the App instantly and permanently destroys all local SQLite
+    databases, cached models, and secure keychain key entries.
 - Do Not Sell or Share Personal Information: We do not sell, rent, or share personal
   information with third parties under any circumstances.
 
 ================================================================================
 
-8. Security
+8. Security & Hardware Protection
 
 Your privacy and security are safeguarded by our local-first architecture:
 - No central database or cloud storage of chat logs to breach.
-- API keys for cloud providers are stored in hardware-backed secure storage on device.
+- API keys for cloud providers are stored in hardware-backed secure storage (Android Keystore / iOS Keychain).
 - All network communications for model downloads or optional cloud APIs are encrypted
   using industry-standard TLS (HTTPS).
 
