@@ -7,39 +7,39 @@
   <meta name="description" content="Terms and Conditions and End User License Agreement (EULA) for Ogma AI: Offline AI Chat LLM.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0F172A;
-      --card-bg: #1E293B;
-      --card-border: #334155;
-      --text: #F1F5F9;
-      --text-muted: #94A3B8;
-      --primary: #38BDF8;
-      --primary-hover: #0EA5E9;
-      --accent: #818CF8;
-      --badge-bg: rgba(56, 189, 248, 0.12);
-      --badge-border: rgba(56, 189, 248, 0.3);
-      --badge-text: #38BDF8;
-      --callout-bg: rgba(30, 41, 59, 0.7);
-      --callout-border: #38BDF8;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-subtle: #64748B;
+      --link: #0369A1;
+      --link-hover: #0284C7;
+      --callout-bg: #F1F5F9;
+      --callout-border: #94A3B8;
+      --table-header-bg: #F8FAFC;
+      --table-border: #E2E8F0;
+      --contact-bg: #F8FAFC;
     }
 
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #F8FAFC;
-        --card-bg: #FFFFFF;
-        --card-border: #E2E8F0;
-        --text: #0F172A;
-        --text-muted: #64748B;
-        --primary: #0284C7;
-        --primary-hover: #0369A1;
-        --accent: #6366F1;
-        --badge-bg: rgba(2, 132, 199, 0.08);
-        --badge-border: rgba(2, 132, 199, 0.2);
-        --badge-text: #0284C7;
-        --callout-bg: #F0F9FF;
-        --callout-border: #0284C7;
+        --bg: #0B0F17;
+        --card-bg: #111827;
+        --card-border: #1F2937;
+        --text-main: #F9FAFB;
+        --text-muted: #D1D5DB;
+        --text-subtle: #9CA3AF;
+        --link: #38BDF8;
+        --link-hover: #7DD3FC;
+        --callout-bg: #1E293B;
+        --callout-border: #475569;
+        --table-header-bg: #1F2937;
+        --table-border: #374151;
+        --contact-bg: #1A2234;
       }
     }
 
@@ -52,162 +52,163 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg);
-      color: var(--text);
+      color: var(--text-main);
       line-height: 1.7;
-      padding: 40px 20px;
+      padding: 48px 16px;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 860px;
+      max-width: 780px;
       margin: 0 auto;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 20px;
+      border-radius: 12px;
       padding: 48px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.03);
     }
 
     @media (max-width: 640px) {
-      body { padding: 16px 12px; }
-      .container { padding: 24px; border-radius: 16px; }
+      body { padding: 16px 8px; }
+      .container { padding: 24px 18px; border-radius: 8px; }
     }
 
     .header {
       border-bottom: 1px solid var(--card-border);
-      padding-bottom: 28px;
-      margin-bottom: 36px;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: var(--badge-bg);
-      border: 1px solid var(--badge-border);
-      color: var(--badge-text);
-      font-size: 0.85rem;
-      font-weight: 600;
-      border-radius: 9999px;
-      margin-bottom: 16px;
-      letter-spacing: 0.02em;
+    .eyebrow {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      margin-bottom: 8px;
     }
 
     h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 2.25rem;
+      font-size: 1.85rem;
       font-weight: 700;
-      color: var(--text);
+      color: var(--text-main);
       letter-spacing: -0.02em;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .subtitle {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      font-weight: 500;
+      color: var(--text-subtle);
+      font-size: 0.875rem;
     }
 
     .callout {
       background: var(--callout-bg);
-      border-left: 4px solid var(--callout-border);
-      padding: 18px 22px;
-      border-radius: 0 12px 12px 0;
-      margin: 24px 0;
-      font-size: 0.95rem;
+      border-left: 3px solid var(--callout-border);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 28px 0;
+      font-size: 0.925rem;
+      color: var(--text-muted);
     }
 
     .callout-title {
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 600;
+      color: var(--text-main);
       margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       font-weight: 600;
-      color: var(--text);
-      margin: 36px 0 16px 0;
-      padding-top: 12px;
+      color: var(--text-main);
+      margin: 36px 0 14px 0;
+      padding-top: 16px;
       border-top: 1px solid var(--card-border);
+      letter-spacing: -0.01em;
     }
 
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.025rem;
       font-weight: 600;
-      color: var(--text);
+      color: var(--text-main);
       margin: 20px 0 10px 0;
     }
 
     p {
-      color: var(--text);
+      color: var(--text-muted);
       margin-bottom: 16px;
-      font-size: 0.95rem;
+      font-size: 0.935rem;
     }
 
     ul {
       margin: 12px 0 20px 24px;
-      color: var(--text);
+      color: var(--text-muted);
     }
 
     li {
       margin-bottom: 8px;
-      font-size: 0.95rem;
+      font-size: 0.935rem;
     }
 
     strong {
-      color: var(--text);
+      color: var(--text-main);
       font-weight: 600;
     }
 
     a {
-      color: var(--primary);
+      color: var(--link);
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.2s;
     }
 
     a:hover {
-      color: var(--primary-hover);
+      color: var(--link-hover);
       text-decoration: underline;
     }
 
+    .contact-card {
+      background: var(--contact-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .contact-card p {
+      margin-bottom: 6px;
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
     .footer {
-      margin-top: 48px;
-      padding-top: 24px;
+      margin-top: 40px;
+      padding-top: 20px;
       border-top: 1px solid var(--card-border);
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-size: 0.8rem;
+      color: var(--text-subtle);
       text-align: center;
     }
 
-    .contact-card {
-      background: var(--bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
+    @media print {
+      body { background: #FFF; color: #000; padding: 0; }
+      .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+      a { color: #000; text-decoration: underline; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <div class="badge">
-        <span>📜</span> Terms & End User License Agreement
-      </div>
+      <span class="eyebrow">Terms of Service & EULA</span>
       <h1>Terms and Conditions</h1>
       <p class="subtitle">Ogma AI: Offline AI Chat LLM • Effective Date: August 13, 2026</p>
     </header>
 
     <div class="callout">
-      <div class="callout-title">
-        <span>💡</span> Summary of Key Terms
-      </div>
+      <div class="callout-title">Summary of Key Terms</div>
       <p>By using Ogma AI, you acknowledge that all AI processing runs on-device using open weights models. You own your prompts, data, and outputs. AI outputs are dynamic and should be verified for sensitive matters. Optional subscriptions are billed through Apple StoreKit.</p>
     </div>
 
@@ -252,10 +253,10 @@
 
     <h2>8. Contact Information</h2>
     <div class="contact-card">
-      <p><strong>Apex Creators</strong> (Abhinav Kumar)</p>
-      <p>📧 Email: <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
-      <p>🌐 Website: <a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></p>
-      <p>🔒 Privacy Policy: <a href="https://weareapexcreators.github.io/policies/ogma_pp.html">https://weareapexcreators.github.io/policies/ogma_pp.html</a></p>
+      <p><strong>Abhinav Kumar / Apex Creators</strong></p>
+      <p>Email: <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
+      <p>Website: <a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></p>
+      <p>Privacy Policy: <a href="https://weareapexcreators.github.io/policies/ogma_pp.html">https://weareapexcreators.github.io/policies/ogma_pp.html</a></p>
     </div>
 
     <footer class="footer">
