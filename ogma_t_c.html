@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - Ogma AI: Offline AI Chat LLM</title>
+  <meta name="description" content="Terms and Conditions and End User License Agreement (EULA) for Ogma AI: Offline AI Chat LLM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F172A;
+      --card-bg: #1E293B;
+      --card-border: #334155;
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --primary: #38BDF8;
+      --primary-hover: #0EA5E9;
+      --accent: #818CF8;
+      --badge-bg: rgba(56, 189, 248, 0.12);
+      --badge-border: rgba(56, 189, 248, 0.3);
+      --badge-text: #38BDF8;
+      --callout-bg: rgba(30, 41, 59, 0.7);
+      --callout-border: #38BDF8;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #F8FAFC;
+        --card-bg: #FFFFFF;
+        --card-border: #E2E8F0;
+        --text: #0F172A;
+        --text-muted: #64748B;
+        --primary: #0284C7;
+        --primary-hover: #0369A1;
+        --accent: #6366F1;
+        --badge-bg: rgba(2, 132, 199, 0.08);
+        --badge-border: rgba(2, 132, 199, 0.2);
+        --badge-text: #0284C7;
+        --callout-bg: #F0F9FF;
+        --callout-border: #0284C7;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 16px 12px; }
+      .container { padding: 24px; border-radius: 16px; }
+    }
+
+    .header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
+      color: var(--badge-text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border-left: 4px solid var(--callout-border);
+      padding: 18px 22px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+      font-size: 0.95rem;
+    }
+
+    .callout-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 36px 0 16px 0;
+      padding-top: 12px;
+      border-top: 1px solid var(--card-border);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 20px 0 10px 0;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 12px 0 20px 24px;
+      color: var(--text);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .contact-card {
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">
+        <span>📜</span> Terms & End User License Agreement
+      </div>
+      <h1>Terms and Conditions</h1>
+      <p class="subtitle">Ogma AI: Offline AI Chat LLM • Effective Date: August 13, 2026</p>
+    </header>
+
+    <div class="callout">
+      <div class="callout-title">
+        <span>💡</span> Summary of Key Terms
+      </div>
+      <p>By using Ogma AI, you acknowledge that all AI processing runs on-device using open weights models. You own your prompts, data, and outputs. AI outputs are dynamic and should be verified for sensitive matters. Optional subscriptions are billed through Apple StoreKit.</p>
+    </div>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading, installing, accessing, or using <strong>Ogma AI: Offline AI Chat LLM</strong> ("the App"), provided by <strong>Abhinav Kumar</strong>, operating as <strong>Apex Creators</strong> ("we," "our," or "us"), you agree to be bound by these Terms and Conditions ("Terms") and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Standard EULA</a>. If you do not agree to these Terms, do not use the App.</p>
+
+    <h2>2. Scope of Service & On-Device Architecture</h2>
+    <p>Ogma AI is a privacy-first, on-device mobile AI assistant:</p>
+    <ul>
+      <li><strong>Local Processing:</strong> All inference, document processing, and vision analysis execute directly on your mobile device hardware.</li>
+      <li><strong>No Server Retainage:</strong> Apex Creators does not host cloud servers to collect, store, or monitor your conversations.</li>
+    </ul>
+
+    <h2>3. AI Content Disclaimer & Model Licenses</h2>
+    <ul>
+      <li><strong>Stochastic AI Output:</strong> Large Language Models generate text stochastically. Apex Creators does not guarantee the factual accuracy, correctness, or completeness of generated content.</li>
+      <li><strong>Open Source Model Licenses:</strong> AI models downloaded via Hugging Face or imported by you are governed by their respective open-source licenses (e.g. Apache 2.0, MIT, Llama Community License).</li>
+      <li><strong>Professional & Medical Disclaimer:</strong> Content generated by the App is for informational, creative, and educational purposes only and must <strong>not</strong> be relied upon as certified legal, financial, or medical advice.</li>
+    </ul>
+
+    <h2>4. Acceptable Use & Prohibited Conduct</h2>
+    <p>You agree to use Ogma AI strictly in compliance with applicable laws, Apple App Store Guidelines, and safety policies. You shall <strong>not</strong> use the App to:</p>
+    <ul>
+      <li>Generate or facilitate illegal harmful material (e.g., CSAM/CSAE or violent extremism).</li>
+      <li>Facilitate hate speech, targeted harassment, extortion, or incitement of violence.</li>
+      <li>Generate malicious exploits or software attacks.</li>
+      <li>Infringe upon third-party intellectual property or copyright.</li>
+    </ul>
+
+    <h2>5. Ownership of Content</h2>
+    <p>You retain 100% full ownership over all prompts, documents, photos, and generated AI responses produced on your device. Apex Creators asserts zero ownership rights over your local creations.</p>
+
+    <h2>6. In-App Purchases & Subscriptions (StoreKit)</h2>
+    <ul>
+      <li><strong>Billing & Renewal:</strong> Payments for optional subscriptions are charged to your Apple ID upon purchase confirmation. Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current billing cycle.</li>
+      <li><strong>Management & Cancellation:</strong> You can manage or cancel auto-renewal at any time in your <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple ID Account Settings</a>.</li>
+      <li><strong>Restore Purchases:</strong> You may restore your previous purchases anytime in App Settings using the "Restore Purchases" button.</li>
+    </ul>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. IN NO EVENT SHALL APEX CREATORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE OF THE APP.</p>
+
+    <h2>8. Contact Information</h2>
+    <div class="contact-card">
+      <p><strong>Apex Creators</strong> (Abhinav Kumar)</p>
+      <p>📧 Email: <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
+      <p>🌐 Website: <a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></p>
+      <p>🔒 Privacy Policy: <a href="https://weareapexcreators.github.io/policies/ogma_pp.html">https://weareapexcreators.github.io/policies/ogma_pp.html</a></p>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Abhinav Kumar / Apex Creators. All rights reserved. • Ogma AI: Offline AI Chat LLM</p>
+    </footer>
+  </div>
+</body>
+</html>
