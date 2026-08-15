@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Ogma AI: Offline AI Chat LLM</title>
+  <meta name="description" content="Privacy Policy for Ogma AI - 100% offline, privacy-first, on-device AI assistant. Zero tracking, zero telemetry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --card-border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-subtle: #64748B;
+      --link: #0369A1;
+      --link-hover: #0284C7;
+      --callout-bg: #F1F5F9;
+      --callout-border: #94A3B8;
+      --table-header-bg: #F8FAFC;
+      --table-border: #E2E8F0;
+      --contact-bg: #F8FAFC;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F17;
+        --card-bg: #111827;
+        --card-border: #1F2937;
+        --text-main: #F9FAFB;
+        --text-muted: #D1D5DB;
+        --text-subtle: #9CA3AF;
+        --link: #38BDF8;
+        --link-hover: #7DD3FC;
+        --callout-bg: #1E293B;
+        --callout-border: #475569;
+        --table-header-bg: #1F2937;
+        --table-border: #374151;
+        --contact-bg: #1A2234;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 48px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 15px -5px rgba(0, 0, 0, 0.03);
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 16px 8px; }
+      .container { padding: 24px 18px; border-radius: 8px; }
+    }
+
+    .header {
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-subtle);
+      font-size: 0.875rem;
+    }
+
+    .callout {
+      background: var(--callout-bg);
+      border-left: 3px solid var(--callout-border);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 28px 0;
+      font-size: 0.925rem;
+      color: var(--text-muted);
+    }
+
+    .callout-title {
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin: 36px 0 14px 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--card-border);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.025rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin: 20px 0 10px 0;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.935rem;
+    }
+
+    ul {
+      margin: 12px 0 20px 24px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.935rem;
+    }
+
+    strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--table-border);
+      text-align: left;
+    }
+
+    th {
+      background: var(--table-header-bg);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .contact-card {
+      background: var(--contact-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .contact-card p {
+      margin-bottom: 6px;
+    }
+
+    .contact-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      text-align: center;
+    }
+
+    @media print {
+      body { background: #FFF; color: #000; padding: 0; }
+      .container { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <span class="eyebrow">Legal & Privacy Statement</span>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Ogma AI: Offline AI Chat LLM • Effective Date: August 13, 2026</p>
+    </header>
+
+    <div class="callout">
+      <div class="callout-title">Executive Summary</div>
+      <p>Ogma AI is engineered from the ground up for <strong>complete on-device privacy</strong>. All AI inference, document parsing, chat logs, and voice processing execute locally on your hardware. <strong>Zero telemetry, zero ads, zero analytics tracking SDKs, and zero cloud surveillance.</strong></p>
+    </div>
+
+    <h2>1. Introduction & Developer Identity</h2>
+    <p>Welcome to <strong>Ogma AI: Offline AI Chat LLM</strong> ("the App"). The App is developed and operated by <strong>Abhinav Kumar</strong>, operating as <strong>Apex Creators</strong> ("we," "our," or "us"). We believe privacy is a fundamental human right, and we have designed Ogma AI so you never have to trust an external cloud with your conversations, documents, or data.</p>
+    <p>This Privacy Policy outlines our data handling practices in strict compliance with the <strong>Apple App Store Review Guidelines (specifically Guideline 5.1.1 & 5.1.2)</strong>, the General Data Protection Regulation (<strong>GDPR</strong>), the California Consumer Privacy Act (<strong>CCPA/CPRA</strong>), and the Children's Online Privacy Protection Act (<strong>COPPA</strong>).</p>
+
+    <h2>2. Data Collection & Processing Practices</h2>
+
+    <h3>2.1 No Account Registration or Personal Data Collection</h3>
+    <p>You can use Ogma AI immediately upon installation without creating an account, registering an email address, providing a phone number, or linking an identity. We do not collect, store, or share your personal identity.</p>
+
+    <h3>2.2 100% Local On-Device Architecture</h3>
+    <ul>
+      <li><strong>Conversations & Chat History:</strong> All prompts, system instructions, and generated AI responses are stored strictly in an encrypted, local SQLite database on your device.</li>
+      <li><strong>Documents & Attachments:</strong> When utilizing document analysis (PDF, DOCX, XLSX, CSV, TXT) or in-app vision, parsing and embedding (sqlite-vec RAG) occur 100% on your device hardware. Files are never uploaded.</li>
+      <li><strong>Voice & Speech:</strong> Speech-to-Text (STT) and Text-to-Speech (TTS) run locally using on-device OS engines. Audio is never recorded, transmitted, or stored remotely.</li>
+    </ul>
+
+    <h3>2.3 Absence of Advertising & Tracking (App Tracking Transparency)</h3>
+    <p>Ogma AI is <strong>100% AD-FREE</strong>. We do not integrate advertising frameworks (e.g., AdMob, Unity Ads) and do not access or collect Advertising Identifiers (Apple IDFA / IDFV). Under Apple's App Tracking Transparency (ATT) framework, Ogma AI engages in <strong>zero cross-app and zero cross-site tracking</strong>.</p>
+
+    <h3>2.4 Zero Cloud Telemetry & No Analytics SDKs</h3>
+    <p>The iOS version of Ogma AI contains <strong>no Firebase Analytics, no Firebase Crashlytics, and no third-party telemetry SDKs</strong>. Diagnostic logs are preserved locally on your device within the App Settings for troubleshooting and are never transmitted over the network.</p>
+
+    <h2>3. External Connections & Third-Party Privacy</h2>
+    <p>The App operates completely offline once AI models are downloaded. Network connectivity is used strictly for optional features and open-source resource downloads:</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Service / Provider</th>
+            <th>Purpose</th>
+            <th>Privacy Policy Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hugging Face</strong></td>
+            <td>Downloading open-source GGUF AI models directly to device</td>
+            <td><a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Google Fonts</strong></td>
+            <td>Open-source typography assets (SIL OFL / Apache 2.0)</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Apple App Store</strong></td>
+            <td>In-App Purchases, StoreKit receipts & subscriptions</td>
+            <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Optional BYOK Providers</strong><br><small>(OpenAI, Anthropic, OpenRouter, Gemini, Groq, Mistral)</small></td>
+            <td>Optional cloud LLM fallback using your own private API key</td>
+            <td>
+              <a href="https://openai.com/privacy/" target="_blank" rel="noopener">OpenAI</a> •
+              <a href="https://privacy.anthropic.com/" target="_blank" rel="noopener">Anthropic</a> •
+              <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener">OpenRouter</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>4. Device Permissions</h2>
+    <p>Ogma AI requests only the permissions necessary for local functionality:</p>
+    <ul>
+      <li><strong>Photo Library & Camera:</strong> Required only when you choose to take a photo or select an image for local vision model analysis.</li>
+      <li><strong>Microphone & Speech Recognition:</strong> Required only when you activate hands-free Voice Mode.</li>
+    </ul>
+
+    <h2>5. In-App Purchases & Subscriptions</h2>
+    <p>Optional subscriptions are billed directly through Apple StoreKit under Apple's standard terms. We never receive or store your credit card or financial information. You can manage or cancel your subscription at any time in your <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple ID Subscriptions</a>.</p>
+
+    <h2>6. Contact Information</h2>
+    <div class="contact-card">
+      <p><strong>Abhinav Kumar / Apex Creators</strong></p>
+      <p>Email: <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
+      <p>Website: <a href="https://www.apexcreators.co.in" target="_blank" rel="noopener">https://www.apexcreators.co.in</a></p>
+      <p>Terms & Conditions: <a href="https://weareapexcreators.github.io/policies/ogma_t_c.html">https://weareapexcreators.github.io/policies/ogma_t_c.html</a></p>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2026 Abhinav Kumar / Apex Creators. All rights reserved. • Ogma AI: Offline AI Chat LLM</p>
+    </footer>
+  </div>
+</body>
+</html>
