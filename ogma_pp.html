@@ -228,12 +228,12 @@
     <header class="header">
       <span class="eyebrow">Legal & Privacy Statement</span>
       <h1>Privacy Policy</h1>
-      <p class="subtitle">Ogma AI: Offline AI Chat LLM • Effective Date: August 13, 2026</p>
+      <p class="subtitle">Ogma AI: Offline AI Chat LLM • Effective Date: August 15, 2026</p>
     </header>
 
     <div class="callout">
       <div class="callout-title">Executive Summary</div>
-      <p>Ogma AI is engineered from the ground up for <strong>complete on-device privacy</strong>. All AI inference, document parsing, chat logs, and voice processing execute locally on your hardware. <strong>Zero telemetry, zero ads, zero analytics tracking SDKs, and zero cloud surveillance.</strong></p>
+      <p>Ogma AI is engineered for <strong>on-device privacy by default</strong>. AI inference, document parsing, chat logs, and text-to-speech execute locally on your hardware. <strong>Zero telemetry, zero ads, zero analytics tracking SDKs.</strong> The only times data leaves your device are optional and user-initiated: Apple speech recognition, web search, and cloud providers you connect with your own API key.</p>
     </div>
 
     <h2>1. Introduction & Developer Identity</h2>
@@ -245,11 +245,11 @@
     <h3>2.1 No Account Registration or Personal Data Collection</h3>
     <p>You can use Ogma AI immediately upon installation without creating an account, registering an email address, providing a phone number, or linking an identity. We do not collect, store, or share your personal identity.</p>
 
-    <h3>2.2 100% Local On-Device Architecture</h3>
+    <h3>2.2 On-Device Architecture</h3>
     <ul>
       <li><strong>Conversations & Chat History:</strong> All prompts, system instructions, and generated AI responses are stored strictly in an encrypted, local SQLite database on your device.</li>
       <li><strong>Documents & Attachments:</strong> When utilizing document analysis (PDF, DOCX, XLSX, CSV, TXT) or in-app vision, parsing and embedding (sqlite-vec RAG) occur 100% on your device hardware. Files are never uploaded.</li>
-      <li><strong>Voice & Speech:</strong> Speech-to-Text (STT) and Text-to-Speech (TTS) run locally using on-device OS engines. Audio is never recorded, transmitted, or stored remotely.</li>
+      <li><strong>Voice &amp; Speech:</strong> Text-to-Speech (TTS) runs fully on-device using the OS speech engine. Speech-to-Text (STT) uses Apple's SFSpeechRecognizer, which may transmit your audio to Apple servers for recognition depending on device and language support. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a> applies. Apex Creators never stores audio, and transcripts are stored only on your device.</li>
     </ul>
 
     <h3>2.3 Absence of Advertising & Tracking (App Tracking Transparency)</h3>
@@ -277,17 +277,17 @@
             <td><a href="https://huggingface.co/privacy" target="_blank" rel="noopener">Hugging Face Privacy</a></td>
           </tr>
           <tr>
-            <td><strong>Google Fonts</strong></td>
-            <td>Open-source typography assets (SIL OFL / Apache 2.0)</td>
-            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td>
-          </tr>
-          <tr>
             <td><strong>Apple App Store</strong></td>
-            <td>In-App Purchases, StoreKit receipts & subscriptions</td>
+            <td>In-App Purchases, StoreKit receipts &amp; subscriptions</td>
             <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy</a></td>
           </tr>
           <tr>
-            <td><strong>Optional BYOK Providers</strong><br><small>(OpenAI, Anthropic, OpenRouter, Gemini, Groq, Mistral)</small></td>
+            <td><strong>DuckDuckGo</strong></td>
+            <td>Optional web search for chat answers (search queries only, no account)</td>
+            <td><a href="https://duckduckgo.com/privacy" target="_blank" rel="noopener">DuckDuckGo Privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Optional BYOK Providers</strong><br><small>(OpenAI, Anthropic, OpenRouter, Self-Hosted)</small></td>
             <td>Optional cloud LLM fallback using your own private API key</td>
             <td>
               <a href="https://openai.com/privacy/" target="_blank" rel="noopener">OpenAI</a> •
@@ -309,7 +309,17 @@
     <h2>5. In-App Purchases & Subscriptions</h2>
     <p>Optional subscriptions are billed directly through Apple StoreKit under Apple's standard terms. We never receive or store your credit card or financial information. You can manage or cancel your subscription at any time in your <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Apple ID Subscriptions</a>.</p>
 
-    <h2>6. Contact Information</h2>
+    <h2>6. Data Retention, Deletion & Your Rights</h2>
+    <ul>
+      <li><strong>Retention:</strong> We do not operate servers that store your conversations, documents, or voice input. All chat history, RAG indexes, and settings live only in the on-device SQLite database, and are deleted whenever you uninstall the app or use the in-app "Clear Chat History" and backup-management controls.</li>
+      <li><strong>Deletion requests:</strong> Because we never hold your data, there is nothing on our servers to delete. To erase all app data, uninstall the app or clear data in Settings.</li>
+      <li><strong>Revoking consent:</strong> You may revoke optional permissions (microphone, camera, photos) at any time in iOS Settings. Optional cloud providers are enabled only by entering your own API key, which you can remove at any time in Settings.</li>
+      <li><strong>Your rights:</strong> Where applicable (GDPR, CCPA/CPRA, UK GDPR), you have the rights to access, correct, delete, and port your personal data, and to object to or restrict processing. Since we collect no personal data, any such request can be fully satisfied on-device as described above. Contact us at <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a> and we will assist within 30 days.</li>
+      <li><strong>Third-party protection:</strong> When data is transmitted to optional third-party services (cloud AI providers you configure, web search, Apple speech recognition), those services provide protection equivalent to this policy under their respective published policies, linked above.</li>
+      <li><strong>Children:</strong> The App does not knowingly collect personal information from children under 13 (or 16 under GDPR). If you believe a child has provided personal information, contact us and we will delete it.</li>
+    </ul>
+
+    <h2>7. Contact Information</h2>
     <div class="contact-card">
       <p><strong>Abhinav Kumar / Apex Creators</strong></p>
       <p>Email: <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
