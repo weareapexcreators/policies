@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy & Terms of Service for Sticker & Photo Widget: Theme (Stickr) by Apex Creators.">
+    <title>Privacy Policy & Terms | Sticker & Photo Widget: Theme</title>
+    <style>
+        :root {
+            --bg-color: #0f1117;
+            --card-bg: #181b24;
+            --card-border: #262a36;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent: #6366f1;
+            --accent-hover: #818cf8;
+            --emerald: #10b981;
+            --rose: #f43f5e;
+            --code-bg: #1f2330;
+            --max-w: 860px;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --card-bg: #ffffff;
+                --card-border: #e2e8f0;
+                --text-primary: #0f172a;
+                --text-secondary: #475569;
+                --text-muted: #94a3b8;
+                --accent: #4f46e5;
+                --accent-hover: #6366f1;
+                --emerald: #059669;
+                --rose: #e11d48;
+                --code-bg: #f1f5f9;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.65;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 9999px;
+            background-color: rgba(99, 102, 241, 0.15);
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .badge-green {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: var(--emerald);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .meta-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .toc-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .toc-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 10px;
+        }
+
+        .toc-list a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: color 0.15s;
+        }
+
+        .toc-list a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--card-border);
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 0.98rem;
+        }
+
+        ul {
+            color: var(--text-secondary);
+            margin-left: 24px;
+            margin-bottom: 18px;
+            font-size: 0.98rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--emerald);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-card h4 {
+            color: var(--emerald);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .highlight-card p {
+            margin-bottom: 0;
+            font-size: 0.92rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th {
+            background-color: var(--code-bg);
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        .contact-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="badge badge-green">100% Ad-Free • Privacy-First</div>
+        <h1>Privacy Policy & End-User License Agreement (EULA)</h1>
+        <p class="meta-text">
+            <strong>App:</strong> Sticker & Photo Widget: Theme (<em>Stickr</em>)<br>
+            <strong>Package Name:</strong> <code>com.apexcreator.stickersimagewidgetapp</code><br>
+            <strong>Effective Date:</strong> September 6, 2026<br>
+            <strong>Developer:</strong> Abhinav Kumar, operating as Apex Creators ("we," "our," or "us")
+        </p>
+    </header>
+
+    <div class="toc-card">
+        <h3>Table of Contents</h3>
+        <ul class="toc-list">
+            <li><a href="#introduction">1. Introduction & Overview</a></li>
+            <li><a href="#data-collection">2. Data Collection & Privacy Practices</a></li>
+            <li><a href="#device-permissions">3. Device Permissions & Usage</a></li>
+            <li><a href="#third-parties">4. Third-Party Services & Privacy Links</a></li>
+            <li><a href="#monetization">5. In-App Subscriptions & Purchases</a></li>
+            <li><a href="#data-safety">6. Google Play Data Safety Compliance</a></li>
+            <li><a href="#children">7. Children's Privacy (COPPA)</a></li>
+            <li><a href="#user-rights">8. User Rights & Data Deletion</a></li>
+            <li><a href="#security">9. Data Security & Storage Architecture</a></li>
+            <li><a href="#eula">10. Terms of Service & EULA</a></li>
+            <li><a href="#policy-changes">11. Changes to This Policy</a></li>
+            <li><a href="#contact">12. Developer Contact Information</a></li>
+        </ul>
+    </div>
+
+    <!-- 1. Introduction -->
+    <section id="introduction">
+        <h2>1. Introduction & Overview</h2>
+        <p>
+            Welcome to <strong>Sticker & Photo Widget: Theme</strong> (internally referenced as <em>Stickr</em>). The application is developed and operated by <strong>Abhinav Kumar</strong>, operating as <strong>Apex Creators</strong>. We are deeply committed to protecting your privacy and ensuring you have complete control over your home screen customization data.
+        </p>
+        <p>
+            The App is engineered from the ground up on a <strong>local-first, on-device architecture</strong>. Your personal gallery photos, custom widget styles, and layout configurations are stored and processed exclusively on your device. We do not operate tracking servers, we do not monitor your device usage, and we do not sell or monetize personal user data.
+        </p>
+        <p>
+            This document outlines our data handling practices in compliance with Google Play Developer Policies, General Data Protection Regulation (<strong>GDPR</strong>), California Consumer Privacy Act (<strong>CCPA / CPRA</strong>), and Children's Online Privacy Protection Act (<strong>COPPA</strong>) as of September 2026.
+        </p>
+    </section>
+
+    <!-- 2. Data Collection -->
+    <section id="data-collection">
+        <h2>2. Data Collection & Privacy Practices</h2>
+        
+        <h3>2.1 Zero Personal Identity Collection</h3>
+        <p>
+            You can use the App without creating an account or providing an email address, phone number, name, or any other personally identifiable information (PII).
+        </p>
+
+        <h3>2.2 100% On-Device Photo Widgets & Custom Packs</h3>
+        <ul>
+            <li><strong>Personal Gallery Photos:</strong> When you select a photo from your device gallery to place inside a home screen widget or to create a custom sticker pack, the image is processed and cached exclusively on your local hardware storage using standard Android storage isolation (Room SQLite & internal cache). Your personal photos are <strong>never</strong> transmitted, uploaded, or analyzed on remote servers.</li>
+            <li><strong>Widget Configurations:</strong> All widget state settings (frame style, opacity, corner radius, rotation frequency, and background tints) remain solely inside the app's local Android Room database.</li>
+            <li><strong>Favorite Stickers:</strong> Your marked favorite stickers and custom packs are saved locally in private device storage.</li>
+        </ul>
+
+        <h3>2.3 Complete Absence of Advertising & Ad Trackers</h3>
+        <div class="highlight-card">
+            <h4>100% Ad-Free Experience</h4>
+            <p>The App contains <strong>zero third-party advertisements</strong>. We do not integrate Google AdMob, Unity Ads, Meta Audience Network, AppLovin, or any advertising SDKs. We do not access, store, or transmit your Android Advertising ID (GAID).</p>
+        </div>
+    </section>
+
+    <!-- 3. Device Permissions -->
+    <section id="device-permissions">
+        <h2>3. Device Permissions & Usage</h2>
+        <p>The App requests only the minimum required Android permissions necessary to provide personalization and widget features:</p>
+        
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Technical Scope</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Photos & Media Access</strong></td>
+                        <td><code>READ_MEDIA_IMAGES</code> / Android Photo Picker</td>
+                        <td>Allows you to choose photos from your gallery for home screen photo widgets and custom packs. Never uploaded externally.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Internet Access</strong></td>
+                        <td><code>android.permission.INTERNET</code></td>
+                        <td>Required exclusively to download sticker packs and process subscription verification via Google Play Billing.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Widget Updates</strong></td>
+                        <td><code>ACTION_APPWIDGET_UPDATE</code></td>
+                        <td>Used by the Android launcher system to render and refresh responsive Jetpack Glance widgets on your home screen.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 4. Third-Party Services -->
+    <section id="third-parties">
+        <h2>4. Third-Party Services & External Privacy Policies</h2>
+        <p>
+            To deliver online sticker catalogs and securely process optional in-app purchases, the App communicates with reputable, industry-standard third-party infrastructure providers over encrypted TLS/HTTPS connections. Below is a full directory of third-party services and links to their official privacy policies:
+        </p>
+
+        <h3>4.1 Google Play In-App Billing (Google LLC)</h3>
+        <p>
+            When you subscribe to Monthly/Annual Pro or purchase the Lifetime VIP Pass, the transaction is handled directly and securely by Google Play Billing. We do not collect, process, or store credit cards, bank account numbers, or billing addresses.
+        </p>
+        <ul>
+            <li><strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+            <li><strong>Google Play Terms of Service:</strong> <a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener noreferrer">https://play.google.com/intl/en_us/about/play-terms/</a></li>
+        </ul>
+
+        <h3>4.2 FreeSVG Public Vector Catalog (FreeSVG.org)</h3>
+        <p>
+            The App provides an optional discovery portal to search and browse open-source, Creative Commons Zero (CC0) public domain vector graphics hosted on FreeSVG. If you optionally choose to sign in with an existing FreeSVG community account, your login credentials and authentication tokens are communicated directly to FreeSVG's API via HTTPS and stored privately in local device DataStore.
+        </p>
+        <ul>
+            <li><strong>FreeSVG Privacy Policy:</strong> <a href="https://freesvg.org/privacy" target="_blank" rel="noopener noreferrer">https://freesvg.org/privacy</a></li>
+            <li><strong>FreeSVG Terms:</strong> <a href="https://freesvg.org/terms" target="_blank" rel="noopener noreferrer">https://freesvg.org/terms</a></li>
+        </ul>
+
+        <h3>4.3 Typography Assets (Google Fonts)</h3>
+        <p>
+            Typography used within the application interface and documentation utilizes open-source font families (e.g., Space Grotesk). Embedded font files or static styling references are governed by Google's Privacy Policy.
+        </p>
+        <ul>
+            <li><strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+        </ul>
+    </section>
+
+    <!-- 5. In-App Monetization -->
+    <section id="monetization">
+        <h2>5. In-App Subscriptions & Purchases</h2>
+        <p>The App offers optional digital products to unlock unlimited downloads, exclusive frames (Polaroid, Dark Surface), and VIP access:</p>
+        <ul>
+            <li><strong>Monthly Pro Pass:</strong> Auto-renewing subscription charged monthly via your Google Play Account.</li>
+            <li><strong>Annual Pro Pass:</strong> Auto-renewing subscription charged annually with discounted pricing.</li>
+            <li><strong>Lifetime VIP Pass:</strong> Non-consumable, one-time payment granting perpetual access to all current and future packs.</li>
+        </ul>
+        <p>
+            <strong>Cancellation & Management:</strong> Subscriptions can be managed or canceled at any time directly in the Google Play Store app under <em>Payments & subscriptions &gt; Subscriptions</em>. Canceling a subscription retains your Pro benefits until the end of the current billing cycle.
+        </p>
+    </section>
+
+    <!-- 6. Google Play Data Safety Compliance -->
+    <section id="data-safety">
+        <h2>6. Google Play Data Safety Compliance</h2>
+        <p>In accordance with Google Play Data Safety declaration requirements:</p>
+        <ul>
+            <li><strong>Data Collected:</strong> No personal identification data (name, email, phone, location) is collected or stored by Apex Creators.</li>
+            <li><strong>Data Shared:</strong> Zero personal data is shared with third parties, data brokers, or advertising networks.</li>
+            <li><strong>Data Encryption in Transit:</strong> All remote network communications (catalog queries, sticker downloads, billing requests) use industry-standard HTTPS/TLS 1.3 encryption.</li>
+            <li><strong>Data Deletion Mechanism:</strong> All user-created widget data, favorites, and downloaded stickers are stored locally on the device and can be permanently deleted by the user at any time.</li>
+        </ul>
+    </section>
+
+    <!-- 7. Children's Privacy -->
+    <section id="children">
+        <h2>7. Children's Privacy (COPPA & Global Regulations)</h2>
+        <p>
+            The App is designed for general audiences and personalization enthusiasts. We do not knowingly collect, solicit, or maintain personal information from children under the age of 13 (or under 16 in the European Economic Area). Because the application operates locally without account registration or remote user profiles, no personal data from minors is harvested, retained, or disclosed.
+        </p>
+    </section>
+
+    <!-- 8. User Rights & Data Deletion -->
+    <section id="user-rights">
+        <h2>8. User Rights & Complete Data Erasure (GDPR / CCPA)</h2>
+        <p>
+            Under global privacy frameworks including the General Data Protection Regulation (<strong>GDPR</strong>), the California Consumer Privacy Act (<strong>CCPA/CPRA</strong>), and the UK GDPR, you have full ownership and rights over your data:
+        </p>
+        <ul>
+            <li><strong>Right to Access & Control:</strong> All your custom widget configurations and sticker packs are directly viewable and manageable inside the App.</li>
+            <li><strong>Right to Immediate Deletion:</strong>
+                <ul>
+                    <li>You can delete any custom pack, sticker, or widget configuration directly inside the App with immediate permanent effect.</li>
+                    <li>You can clear all cached sticker assets and preferences anytime via your Android system settings (<em>Settings &gt; Apps &gt; Stickr &gt; Storage &gt; Clear Storage / Clear Cache</em>).</li>
+                    <li>Uninstalling the App permanently removes all Room SQLite database records, DataStore preferences, and downloaded sticker files from your device.</li>
+                </ul>
+            </li>
+            <li><strong>Right to Opt-Out of Sale / Sharing:</strong> We do <strong>NOT</strong> sell, rent, or trade your personal information. Therefore, no opt-out request is required.</li>
+        </ul>
+    </section>
+
+    <!-- 9. Security -->
+    <section id="security">
+        <h2>9. Data Security & Storage Architecture</h2>
+        <p>
+            We enforce strict security safeguards to protect your device data:
+        </p>
+        <ul>
+            <li><strong>Local Sandbox Isolation:</strong> Android application sandboxing prevents other applications from inspecting your personal widget photos or local Room database files.</li>
+            <li><strong>Zero Remote Storage:</strong> Because your personal photos and widget compositions are never stored on external servers, there is zero risk of remote database breaches or cloud leaks.</li>
+            <li><strong>Transport Layer Security:</strong> All sticker catalog synchronization and Google Play billing transactions occur exclusively over TLS 1.3 encrypted connections.</li>
+        </ul>
+    </section>
+
+    <!-- 10. EULA & Terms -->
+    <section id="eula">
+        <h2>10. Terms of Service & End-User License Agreement (EULA)</h2>
+        <p>
+            By downloading, installing, or using <strong>Sticker & Photo Widget: Theme</strong>, you agree to be bound by the following terms:
+        </p>
+        <h3>10.1 License Grant</h3>
+        <p>
+            Apex Creators grants you a personal, revocable, non-exclusive, non-transferable, limited license to install and use the App on compatible Android devices owned or controlled by you, strictly for personal, non-commercial personalization purposes.
+        </p>
+        <h3>10.2 Intellectual Property & Content Rights</h3>
+        <ul>
+            <li><strong>App Code & Custom Assets:</strong> The application design, interface, software code, custom frame implementations, and proprietary branding are the intellectual property of Apex Creators.</li>
+            <li><strong>Public Domain Stickers:</strong> Stickers sourced from open-source repositories (such as FreeSVG) are provided under Creative Commons Zero (CC0) or their respective open-source licenses.</li>
+            <li><strong>User Content:</strong> You retain full copyright and ownership of any personal images or photos you place into widgets. You warrant that your images do not violate any applicable laws or infringe on third-party intellectual property.</li>
+        </ul>
+        <h3>10.3 Disclaimer of Warranties</h3>
+        <p>
+            The App is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, either express or implied, including but not limited to merchantability, fitness for a particular purpose, or non-infringement.
+        </p>
+        <h3>10.4 Limitation of Liability</h3>
+        <p>
+            To the maximum extent permitted by applicable law, Apex Creators and Abhinav Kumar shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your access to or use of the application.
+        </p>
+    </section>
+
+    <!-- 11. Changes -->
+    <section id="policy-changes">
+        <h2>11. Changes to This Privacy Policy & Terms</h2>
+        <p>
+            We may occasionally update this Privacy Policy & EULA to reflect feature enhancements, Android OS updates, or regulatory modifications. Any revisions will be indicated by an updated "Effective Date" at the top of this page. We encourage you to review this policy periodically.
+        </p>
+    </section>
+
+    <!-- 12. Contact -->
+    <section id="contact">
+        <h2>12. Developer Contact Information</h2>
+        <p>
+            If you have questions, feedback, or inquiries regarding this Privacy Policy, your data rights, or the application, please contact us directly:
+        </p>
+        <div class="contact-box">
+            <p><strong>Developer:</strong> Abhinav Kumar</p>
+            <p><strong>Operating Brand:</strong> Apex Creators</p>
+            <p><strong>Official Email:</strong> <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
+            <p><strong>Official Website:</strong> <a href="https://www.apexcreators.co.in" target="_blank" rel="noopener noreferrer">https://www.apexcreators.co.in</a></p>
+            <p><strong>Support & Inquiries:</strong> <a href="mailto:info@apexcreators.co.in">info@apexcreators.co.in</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Apex Creators. All rights reserved.</p>
+        <p>Sticker & Photo Widget: Theme (Stickr) • Privacy Policy & End-User License Agreement</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
